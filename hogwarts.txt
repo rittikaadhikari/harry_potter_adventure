@@ -1,0 +1,235 @@
+﻿{
+  "startingRoom": "MatthewsStreet",
+  "endingRoom": "Siebel1314",
+  "rooms": [
+    {
+      "name": "MatthewsStreet",
+      "description": "You are on Matthews, outside the Siebel Center",
+      "items": [
+        {
+          "name": "coin",
+          "damage": "5.0"
+        }
+      ],
+      "directions": [
+        {
+          "directionName": "East",
+          "room": "SiebelEntry"
+        }
+      ]
+    },
+    {
+      "name": "SiebelEntry",
+      "description": "You are in the west entry of Siebel Center.  You can see the elevator, the ACM office, and hallways to the north and east.",
+	  "items": [
+        {
+         "name": "sweatshirt",
+          "damage": "8.0"
+        },
+        {
+          "name": "key",
+          "damage": "2.0"
+        }
+      ],
+      "monstersInRoom": ["Guardian-of-Admissions"],
+      "directions": [
+        {
+          "directionName": "West",
+          "room": "MatthewsStreet"
+        },
+        {
+          "directionName": "Northeast",
+          "room": "AcmOffice"
+        },
+        {
+          "directionName": "North",
+          "room": "SiebelNorthHallway"
+        },
+        {
+          "directionName": "East",
+          "room": "SiebelEastHallway"
+        }
+      ]
+    },
+    {
+      "name": "AcmOffice",
+      "description": "You are in the ACM office.  There are lots of friendly ACM people.",
+      "items": [
+        {
+          "name": "pizza",
+          "damage": "8.0"
+        },
+        {
+          "name": "swag",
+          "damage": "5.0"
+        }
+      ],
+      "monstersInRoom": ["ACM-Mafia"],
+      "directions": [
+        {
+          "directionName": "South",
+          "room": "SiebelEntry"
+        }
+      ]
+    },
+    {
+      "name": "SiebelNorthHallway",
+      "description": "You are in the north hallway.  You can see Siebel 1112 and the door toward NCSA.",
+      "monstersInRoom": ["Ghosts-of-Student-GPAs"],
+      "directions": [
+        {
+          "directionName": "South",
+          "room": "SiebelEntry"
+        }, 
+        {
+          "directionName": "NorthEast",
+          "room": "Siebel1112"
+        }
+      ]
+    },
+    {
+      "name": "Siebel1112",
+      "description": "You are in Siebel 1112.  There is space for two code reviews in this room.",
+      "items": [
+        {
+          "name": "USB-C-connector",
+          "damage": "10.0"
+        },
+        {
+          "name": "grading-rubric",
+          "damage": "10.0"
+        }
+      ],
+      "directions": [
+        {
+          "directionName": "West",
+          "room": "SiebelNorthHallway"
+        }
+      ]
+    },
+    {
+      "name": "SiebelEastHallway",
+      "description": "You are in the east hallway.  You can see Einstein Bros' Bagels and a stairway.",
+      "monstersInRoom": ["Coffee-Zombies"],
+      "items": [
+        {
+          "name": "bagel",
+          "damage": "12.0"
+        },
+        {
+          "name": "coffee",
+          "damage": "12.0"
+        }
+      ],
+      "directions": [
+        {
+          "directionName": "West",
+          "room": "SiebelEntry"
+        },
+        {
+          "directionName": "South",
+          "room": "Siebel1314"
+        },
+        {
+          "directionName": "Down",
+          "room": "SiebelBasement"
+        }
+      ]
+    },
+    {
+      "name": "Siebel1314",
+      "description": "You are in Siebel 1314.  There are happy CS 126 students doing a code review.",
+      "monstersInRoom": ["Code-Review-Moderator", "126-Students"],
+      "directions": [
+        {
+          "directionName": "North",
+          "room": "SiebelEastHallway"
+        }
+      ]
+    },
+    {
+      "name": "SiebelBasement",
+      "description": "You are in the basement of Siebel.  You see tables with students working and door to computer labs.",
+      "monstersInRoom": ["CS125-Student-Swarm"],
+      "items": [
+        {
+          "name": "pencil",
+          "damage": "50.0"
+        }
+      ],
+      "directions": [
+        {
+          "directionName": "Up",
+          "room": "SiebelEastHallway"
+        }
+      ]
+    }
+  ],
+  "player": {
+    "name": "Student",
+    "items": [
+      {
+        "name": "laptop",
+        "damage": "5.0"
+      }
+    ],
+    "attack": "20.0",
+    "defense": "20.0",
+    "health": "20.0",
+    "level": "0"
+  },
+  "monsters": [
+    {
+      "name": "Guardian-of-Admissions",
+      "description": "This monster guards against wannabe CS freshmen and transfers.",
+      "attack": "15.0",
+      "defense": "15.0",
+      "health": "15.0"
+    },
+    {
+      "name": "ACM-Mafia",
+      "description": "Never borrow money from ACM. ACM is gonna get ya.",
+      "attack": "25.0",
+      "defense": "15.0",
+      "health": "20.0"
+    },
+    {
+      "name": "Ghosts-of-Student-GPAs",
+      "description": "Once students at CS@Illinois, their GPAs were broken beyond repair. As revenge, they'll break the GPA of all who venture near.",
+      "attack": "15.0",
+      "defense": "25.0",
+      "health": "15.0"
+    },
+    {
+      "name": "Coffee-Zombies",
+      "description": "Einstein Bros' Coffee actually contained a virus, turning all students who frequent it into mindless, soulless, coffee-driven zombies... or maybe it was just the 8am.",
+      "attack": "25.0",
+      "defense": "25.0",
+      "health": "20.0"
+    },
+    {
+      "name": "CS125-Student-Swarm",
+      "description": "As the word 'help' echoes in your head, these students will rip you apart, asking for 125 MP help.",
+      "attack": "30.0",
+      "defense": "30.0",
+      "health": "30.0"
+    },
+    {
+      "name": "126-Students",
+      "description": "Angry at you for interrupting their code review, these students serve as the primary defense of the moderator.",
+      "attack": "15.0",
+      "defense": "15.0",
+      "health": "15.0"
+    },
+    {
+      "name": "Code-Review-Moderator",
+      "description": "The final boss. Vanquish the moderator and your GPA is safe.",
+      "attack": "45.0",
+      "defense": "45.0",
+      "health": "45.0"
+    }
+  ]
+
+
+
+}
