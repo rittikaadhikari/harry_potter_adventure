@@ -105,7 +105,7 @@
     {
       "name": "Classroom",
       "description": "A place for learning: Here, you can practice spells and add them to your repertoire.",
-      "monstersInRoom": ["Ghosts-of-Student-GPAs"],
+      "spells": ["Accio", "Aguamenti", "Alohamora", "Aparecium", "Arania Exumai", "Arresto Momentum", "Avis", "Bombarda", "Colloportus", "Confringo", "Confundo", "Diffindo", "Engorgio", "Episkey", "Evanesco", "Expelliarmus", "Expulso", "Finite_Incantatem", "Flipendo", "Geminio", "Homenum_Revelio", "Immobulus", "Impedimenta", "Impervius", "Langlock", "Lumos", "Nox", "Obliviate", "Obscuro", "Oppugno", "Reducio", "Reducto", "Serpensortia", "Tempus" ],
       "directions": [
         {
           "directionName": "Forbidden_Forest",
