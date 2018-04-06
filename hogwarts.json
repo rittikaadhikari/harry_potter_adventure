@@ -105,15 +105,16 @@
     {
       "name": "Classroom",
       "description": "A place for learning: Here, you can practice spells and add them to your repertoire.",
-      "spells": ["Accio", "Aguamenti", "Alohamora", "Aparecium", "Arania Exumai", "Arresto Momentum", "Avis", "Bombarda", "Colloportus", "Confringo", "Confundo", "Diffindo", "Engorgio", "Episkey", "Evanesco", "Expelliarmus", "Expulso", "Finite_Incantatem", "Flipendo", "Geminio", "Homenum_Revelio", "Immobulus", "Impedimenta", "Impervius", "Langlock", "Lumos", "Nox", "Obliviate", "Obscuro", "Oppugno", "Reducio", "Reducto", "Serpensortia", "Tempus" ],
+      "studentsInRoom": ["Draco", "Hermione", "Neville", "Lavender", "Ron", "Harry", "Pansy", "Blaise" ],
+      "spells": ["Accio", "Aguamenti", "Alohamora", "Aparecium", "Arania_Exumai", "Arresto_Momentum", "Avis", "Bombarda", "Colloportus", "Confringo", "Confundo", "Diffindo", "Engorgio", "Episkey", "Evanesco", "Expelliarmus", "Expulso", "Finite_Incantatem", "Flipendo", "Geminio", "Homenum_Revelio", "Immobulus", "Impedimenta", "Impervius", "Langlock", "Lumos", "Nox", "Obliviate", "Obscuro", "Oppugno", "Reducio", "Reducto", "Serpensortia", "Tempus" ],
       "directions": [
         {
           "directionName": "Forbidden_Forest",
           "room": "Forbidden_Forest"
         },
         {
-          "directionName": "Classroom",
-          "room": "Classroom"
+          "directionName": "Great_Hall",
+          "room": "Great_Hall"
         },
         {
           "directionName": "Astronomy_Tower",
@@ -138,15 +139,11 @@
       ]
     },
     {
-      "name": "Siebel1112",
-      "description": "You are in Siebel 1112.  There is space for two code reviews in this room.",
+      "name": "Astronomy_Tower",
+      "description": "The Astronomy Tower is the tallest tower at Hogwarts Castle. \n It is where students study the stars and planets through their telescopes in Astronomy lessons with Professor Aurora Sinistra.",
       "items": [
         {
-          "name": "USB-C-connector",
-          "damage": "10.0"
-        },
-        {
-          "name": "grading-rubric",
+          "name": "telescope",
           "damage": "10.0"
         }
       ],
@@ -160,8 +157,8 @@
           "room": "Classroom"
         },
         {
-          "directionName": "Astronomy_Tower",
-          "room": "Astronomy_Tower"
+          "directionName": "Great_Hall",
+          "room": "Great_Hall"
         },
         {
           "directionName": "Library",
@@ -182,7 +179,7 @@
       ]
     },
     {
-      "name": "SiebelEastHallway",
+      "name": "Library",
       "description": "You are in the east hallway.  You can see Einstein Bros' Bagels and a stairway.",
       "monstersInRoom": ["Coffee-Zombies"],
       "items": [
@@ -209,8 +206,8 @@
           "room": "Astronomy_Tower"
         },
         {
-          "directionName": "Library",
-          "room": "Library"
+          "directionName": "Great_Hall",
+          "room": "Great_Hall"
         },
         {
           "directionName": "Kitchen",
@@ -227,7 +224,7 @@
       ]
     },
     {
-      "name": "Siebel1314",
+      "name": "Kitchen",
       "description": "You are in Siebel 1314.  There are happy CS 126 students doing a code review.",
       "monstersInRoom": ["Code-Review-Moderator", "126-Students"],
       "directions": [
@@ -248,8 +245,8 @@
           "room": "Library"
         },
         {
-          "directionName": "Kitchen",
-          "room": "Kitchen"
+          "directionName": "Great_Hall",
+          "room": "Great_Hall"
         },
         {
           "directionName": "Headmaster's_Office",
@@ -262,7 +259,7 @@
       ]
     },
     {
-      "name": "SiebelBasement",
+      "name": "Headmaster's_Office",
       "description": "You are in the basement of Siebel.  You see tables with students working and door to computer labs.",
       "monstersInRoom": ["CS125-Student-Swarm"],
       "items": [
@@ -293,12 +290,53 @@
           "room": "Kitchen"
         },
         {
-          "directionName": "Headmaster's_Office",
-          "room": "Headmaster's_Office"
+          "directionName": "Great_Hall",
+          "room": "Great_Hall"
         },
         {
           "directionName": "Hospital_Wing",
           "room": "Hospital_Wing"
+        }
+      ]
+    },
+    {
+      "name": "Hospital_Wing",
+      "description": "You are in the basement of Siebel.  You see tables with students working and door to computer labs.",
+      "monstersInRoom": ["CS125-Student-Swarm"],
+      "items": [
+        {
+          "name": "pencil",
+          "damage": "50.0"
+        }
+      ],
+      "directions": [
+        {
+          "directionName": "Forbidden_Forest",
+          "room": "Forbidden_Forest"
+        },
+        {
+          "directionName": "Classroom",
+          "room": "Classroom"
+        },
+        {
+          "directionName": "Astronomy_Tower",
+          "room": "Astronomy_Tower"
+        },
+        {
+          "directionName": "Library",
+          "room": "Library"
+        },
+        {
+          "directionName": "Kitchen",
+          "room": "Kitchen"
+        },
+        {
+          "directionName": "Great_Hall",
+          "room": "Great_Hall"
+        },
+        {
+          "directionName": "Great_Hall",
+          "room": "Great_Hall"
         }
       ]
     }
