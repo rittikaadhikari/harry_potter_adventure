@@ -1,89 +1,139 @@
 ﻿{
-  "startingRoom": "MatthewsStreet",
-  "endingRoom": "Siebel1314",
+  "startingRoom": "Ollivanders",
   "rooms": [
     {
-      "name": "MatthewsStreet",
-      "description": "You are on Matthews, outside the Siebel Center",
+      "name": "Ollivanders",
+      "description": "Ollivanders is a wand shop founded in 382 B.C.. Located in Diagon Alley South Side in London, England, it is owned by the Ollivander family, widely acknowledged to be the best wandmakers in Great Britain.",
       "items": [
         {
-          "name": "coin",
-          "damage": "5.0"
+          "name": "wand",
+          "damage": "15.0"
         }
       ],
       "directions": [
         {
-          "directionName": "East",
-          "room": "SiebelEntry"
+          "directionName": "Hogwarts",
+          "room": "Great_Hall"
         }
       ]
     },
     {
-      "name": "SiebelEntry",
-      "description": "You are in the west entry of Siebel Center.  You can see the elevator, the ACM office, and hallways to the north and east.",
+      "name": "Great Hall",
+      "description": "The Great Hall is the main place where students receive their meals and daily owl post.\n They also have certain special events, such as the Sorting Ceremony and the Hallowe'en Feast. The large hall has enough space to hold every student, as well as the main staff and guests. \n The Hall has tall walls that reach up to the ceiling, which is covered with floating candles and enchanted to look like the sky above. \n At the front of the hall is the staff table, also known as the High Table, which is designed to house the entire Hogwarts staff. In the centre of the table is a throne chair where the present Headteacher sits. At the left of the table is a door which leads a chamber with portraits.",
 	  "items": [
         {
-         "name": "sweatshirt",
-          "damage": "8.0"
+         "name": "Treacle Tart",
+          "damage": "1.0"
         },
         {
-          "name": "key",
+          "name": "Pumpkin Juice",
           "damage": "2.0"
         }
       ],
-      "monstersInRoom": ["Guardian-of-Admissions"],
       "directions": [
         {
-          "directionName": "West",
-          "room": "MatthewsStreet"
+          "directionName": "Forbidden_Forest",
+          "room": "Forbidden_Forest"
         },
         {
-          "directionName": "Northeast",
-          "room": "AcmOffice"
+          "directionName": "Classroom",
+          "room": "Classroom"
         },
         {
-          "directionName": "North",
-          "room": "SiebelNorthHallway"
+          "directionName": "Astronomy_Tower",
+          "room": "Astronomy_Tower"
         },
         {
-          "directionName": "East",
-          "room": "SiebelEastHallway"
+          "directionName": "Library",
+          "room": "Library"
+        },
+        {
+          "directionName": "Kitchen",
+          "room": "Kitchen"
+        },
+        {
+          "directionName": "Headmaster's_Office",
+          "room": "Headmaster's_Office"
+        },
+        {
+          "directionName": "Hospital_Wing",
+          "room": "Hospital_Wing"
         }
       ]
     },
     {
-      "name": "AcmOffice",
-      "description": "You are in the ACM office.  There are lots of friendly ACM people.",
+      "name": "Forbidden_Forest",
+      "description": "The Forbidden Forest, also known as the Dark Forest, borders the edges of the Hogwarts School of Witchcraft and Wizardry grounds. \n The forest is a very old place that holds many secrets and houses many creatures, some dark and Dangerous, others friendly. \n The trees in the forest are considered ancient, they are dense and rough looking from years of exposure to the elements.As the forest's name suggests, it is strictly off limits to students — except in the case of detention, or Care of Magical Creatures lessons that occasionally take place there. \n Of course, with the various dangerous creatures living in the Forest, few students would even want to venture into it. Black flowers are known to grow in the forest.",
       "items": [
         {
-          "name": "pizza",
+          "name": "Unicorn Blood",
           "damage": "8.0"
-        },
-        {
-          "name": "swag",
-          "damage": "5.0"
         }
       ],
-      "monstersInRoom": ["ACM-Mafia"],
+      "monstersInRoom": ["Acromantula", "Giant", "Cerberus", "Blast-Ended_Skrewt", "Troll" ],
       "directions": [
         {
-          "directionName": "South",
-          "room": "SiebelEntry"
+          "directionName": "Great_Hall",
+          "room": "Great_Hall"
+        },
+        {
+          "directionName": "Classroom",
+          "room": "Classroom"
+        },
+        {
+          "directionName": "Astronomy_Tower",
+          "room": "Astronomy_Tower"
+        },
+        {
+          "directionName": "Library",
+          "room": "Library"
+        },
+        {
+          "directionName": "Kitchen",
+          "room": "Kitchen"
+        },
+        {
+          "directionName": "Headmaster's_Office",
+          "room": "Headmaster's_Office"
+        },
+        {
+          "directionName": "Hospital_Wing",
+          "room": "Hospital_Wing"
         }
       ]
     },
     {
-      "name": "SiebelNorthHallway",
-      "description": "You are in the north hallway.  You can see Siebel 1112 and the door toward NCSA.",
+      "name": "Classroom",
+      "description": "A place for learning: Here, you can practice spells and add them to your repertoire.",
       "monstersInRoom": ["Ghosts-of-Student-GPAs"],
       "directions": [
         {
-          "directionName": "South",
-          "room": "SiebelEntry"
-        }, 
+          "directionName": "Forbidden_Forest",
+          "room": "Forbidden_Forest"
+        },
         {
-          "directionName": "NorthEast",
-          "room": "Siebel1112"
+          "directionName": "Classroom",
+          "room": "Classroom"
+        },
+        {
+          "directionName": "Astronomy_Tower",
+          "room": "Astronomy_Tower"
+        },
+        {
+          "directionName": "Library",
+          "room": "Library"
+        },
+        {
+          "directionName": "Kitchen",
+          "room": "Kitchen"
+        },
+        {
+          "directionName": "Headmaster's_Office",
+          "room": "Headmaster's_Office"
+        },
+        {
+          "directionName": "Hospital_Wing",
+          "room": "Hospital_Wing"
         }
       ]
     },
@@ -102,8 +152,32 @@
       ],
       "directions": [
         {
-          "directionName": "West",
-          "room": "SiebelNorthHallway"
+          "directionName": "Forbidden_Forest",
+          "room": "Forbidden_Forest"
+        },
+        {
+          "directionName": "Classroom",
+          "room": "Classroom"
+        },
+        {
+          "directionName": "Astronomy_Tower",
+          "room": "Astronomy_Tower"
+        },
+        {
+          "directionName": "Library",
+          "room": "Library"
+        },
+        {
+          "directionName": "Kitchen",
+          "room": "Kitchen"
+        },
+        {
+          "directionName": "Headmaster's_Office",
+          "room": "Headmaster's_Office"
+        },
+        {
+          "directionName": "Hospital_Wing",
+          "room": "Hospital_Wing"
         }
       ]
     },
@@ -123,16 +197,32 @@
       ],
       "directions": [
         {
-          "directionName": "West",
-          "room": "SiebelEntry"
+          "directionName": "Forbidden_Forest",
+          "room": "Forbidden_Forest"
         },
         {
-          "directionName": "South",
-          "room": "Siebel1314"
+          "directionName": "Classroom",
+          "room": "Classroom"
         },
         {
-          "directionName": "Down",
-          "room": "SiebelBasement"
+          "directionName": "Astronomy_Tower",
+          "room": "Astronomy_Tower"
+        },
+        {
+          "directionName": "Library",
+          "room": "Library"
+        },
+        {
+          "directionName": "Kitchen",
+          "room": "Kitchen"
+        },
+        {
+          "directionName": "Headmaster's_Office",
+          "room": "Headmaster's_Office"
+        },
+        {
+          "directionName": "Hospital_Wing",
+          "room": "Hospital_Wing"
         }
       ]
     },
@@ -142,8 +232,32 @@
       "monstersInRoom": ["Code-Review-Moderator", "126-Students"],
       "directions": [
         {
-          "directionName": "North",
-          "room": "SiebelEastHallway"
+          "directionName": "Forbidden_Forest",
+          "room": "Forbidden_Forest"
+        },
+        {
+          "directionName": "Classroom",
+          "room": "Classroom"
+        },
+        {
+          "directionName": "Astronomy_Tower",
+          "room": "Astronomy_Tower"
+        },
+        {
+          "directionName": "Library",
+          "room": "Library"
+        },
+        {
+          "directionName": "Kitchen",
+          "room": "Kitchen"
+        },
+        {
+          "directionName": "Headmaster's_Office",
+          "room": "Headmaster's_Office"
+        },
+        {
+          "directionName": "Hospital_Wing",
+          "room": "Hospital_Wing"
         }
       ]
     },
@@ -159,8 +273,32 @@
       ],
       "directions": [
         {
-          "directionName": "Up",
-          "room": "SiebelEastHallway"
+          "directionName": "Forbidden_Forest",
+          "room": "Forbidden_Forest"
+        },
+        {
+          "directionName": "Classroom",
+          "room": "Classroom"
+        },
+        {
+          "directionName": "Astronomy_Tower",
+          "room": "Astronomy_Tower"
+        },
+        {
+          "directionName": "Library",
+          "room": "Library"
+        },
+        {
+          "directionName": "Kitchen",
+          "room": "Kitchen"
+        },
+        {
+          "directionName": "Headmaster's_Office",
+          "room": "Headmaster's_Office"
+        },
+        {
+          "directionName": "Hospital_Wing",
+          "room": "Hospital_Wing"
         }
       ]
     }
