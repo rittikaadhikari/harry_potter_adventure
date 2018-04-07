@@ -8,11 +8,15 @@ public enum PlayerAction {
     quit,
     playerinfo,
     duel,
-    duelwith,
+    attack,
+    attackwith,
+    disengage,
     travelto,
     listspells,
+    listitems,
     takeitem,
     dropitem,
+    learnspell,
     eatfood;
 
     /**

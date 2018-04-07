@@ -1,9 +1,9 @@
 package src.com.example.things;
 
 public class Food extends Thing {
-    private String bonus;
+    private double bonus;
 
-    public String getBonus() {
+    public double getBonus() {
         return bonus;
     }
 

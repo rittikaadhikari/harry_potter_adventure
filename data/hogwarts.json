@@ -269,7 +269,7 @@
         {
           "name": "Fish_and_Chips",
           "bonus": "50.0"
-        },
+        }
       ],
       "directions": [
         "Forbidden_Forest",
@@ -282,7 +282,7 @@
       ]
     },
     {
-      "name": "Headmaster's_Office",
+      "name": "Headmasters_Office",
       "description": "The Headmaster's office is the office in Hogwarts Castle in which the current headmasters or headmistresses of Hogwarts School of Witchcraft and Wizardry work during the school year.",
       "directions": [
         "Forbidden_Forest",

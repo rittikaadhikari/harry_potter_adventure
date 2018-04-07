@@ -28,6 +28,22 @@ public abstract class Person {
         return health;
     }
 
+    public void setAttack(double attack) {
+        this.attack = attack;
+    }
+
+    public void setDefense(double defense) {
+        this.defense = defense;
+    }
+
+    public void setHealth(double health) {
+        this.health = health;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     /**
      *
      * @return

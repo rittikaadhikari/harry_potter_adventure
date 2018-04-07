@@ -2,6 +2,7 @@ package src.com.example.layout;
 
 import com.google.gson.Gson;
 import src.com.example.Data;
+import src.com.example.ErrorConstants;
 import src.com.example.things.*;
 
 import java.util.ArrayList;
@@ -18,19 +19,11 @@ public class Layout {
     /**
      * all the student objects
      */
-    private static ArrayList<Student> students;
+    private ArrayList<Student> students;
     /**
      * all the monster objects
      */
-    private static ArrayList<Monster> monsters;
-    /**
-     * all the food objects
-     */
-    private ArrayList<Food> food;
-    /**
-     * all the spell objects
-     */
-    private ArrayList<Spell> spells;
+    private ArrayList<Monster> monsters;
     /**
      * the player object
      */
@@ -81,23 +74,6 @@ public class Layout {
         return player;
     }
 
-    /**
-     * gets all food in an arraylist.
-     *
-     * @return food
-     */
-    public ArrayList<Food> getFood() {
-        return food;
-    }
-
-    /**
-     * gets all spells in an arraylist.
-     *
-     * @return spells
-     */
-    public ArrayList<Spell> getSpells() {
-        return spells;
-    }
 
     /**
      * Loads the layout from a given filename.
@@ -111,9 +87,9 @@ public class Layout {
     }
 
 
-    public static Student findStudentToDuel(String studentName) {
+    public Student findStudentToDuel(String studentName) {
         for (Student student : students) {
-            if (student.getName().toLowerCase().equals(studentName.toLowerCase())) {
+            if (student.getName().equalsIgnoreCase(studentName)) {
                 return student;
             }
         }
@@ -121,14 +97,22 @@ public class Layout {
         return null;
     }
 
-    public static Monster findMonsterToDuel(String monsterName) {
+    public Monster findMonsterToDuel(String monsterName) {
         for (Monster monster : monsters) {
-            if (monster.getName().toLowerCase().equalsIgnoreCase(monsterName)) {
+            if (monster.getName().equalsIgnoreCase(monsterName)) {
                 return monster;
             }
         }
 
         return null;
+    }
+
+    public Room findRoom(ArrayList<Room> rooms, String startingRoom) {
+        for (Room room : rooms) {
+            if (startingRoom.equalsIgnoreCase(room.getName())) return room;
+        }
+
+        throw new IllegalArgumentException(ErrorConstants.NOT_FOUND);
     }
 
 }

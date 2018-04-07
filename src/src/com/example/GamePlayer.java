@@ -1,5 +1,11 @@
 package src.com.example;
 
+import src.com.example.layout.Layout;
+import src.com.example.layout.Room;
+import src.com.example.things.Item;
+import src.com.example.things.Monster;
+import src.com.example.things.Player;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -16,63 +22,63 @@ public class GamePlayer {
      */
     public static void playGame(Layout layout) {
         // initializes values
-        String startingLocation = layout.getStartingLocation();
-        String endingLocation = layout.getEndingLocation();
-        ArrayList<Location> locations = layout.getLocations();
+        String startingRoom = layout.getStartingRoom();
+        ArrayList<Room> rooms = layout.getRooms();
         Player player = layout.getPlayer();
 
-        Location currLoc = Location.findLocation(locations, startingLocation);
-        Location endLoc = Location.findLocation(locations, endingLocation);
+        Room currRoom = layout.findRoom(rooms, startingRoom);
+        Room greatHall = layout.findRoom(rooms, "Great_Hall");
         boolean isStartingRoom = true;
-        boolean isEndingRoom = false;
+        boolean visitedGreatHall = false;
 
-        // while the room is not the ending room,
+        // while the user doesn't quit,
         // keep playing the game
-        while (!isEndingRoom) {
-            System.out.println(currLoc.getDescription());
+        while (true) {
+            System.out.println(currRoom.getDescription());
 
-            isStartingRoom = checkIfStartingLocation(isStartingRoom);
-            isEndingRoom = checkIfEndingLocation(currLoc.getName(), endLoc);
+            isStartingRoom = checkIfStartingLocation(isStartingRoom, player);
+            visitedGreatHall = checkIfGreatHall(visitedGreatHall, player);
 
-            ArrayList<Weapon> weapons = currLoc.getWeapons();
-            Location.listWeaponsInLocation(weapons);
-
-            ArrayList<Monster> monsters = new ArrayList<>();
-            if (currLoc instanceof BattleField) {
-                monsters = ((BattleField) currLoc).getMonsters();
-                ((BattleField) currLoc).listMonsters();
+            if (currRoom.getItems() == null) {
+                System.out.println("There are no items in this room");
             } else {
-                System.out.println("You are in a castle, so there are no monsters.");
+                currRoom.listItemsInRoom();
             }
 
-            boolean areMonsters = true;
-            String toAdvance = null;
-            if (monsters.size() == 0) {
-                toAdvance = currLoc.getToAdvance();
-                System.out.println("You may now travel to " + toAdvance);
-                areMonsters = false;
+            if (currRoom.getFood() == null) {
+                System.out.println("There is no food in this room");
+            } else {
+                currRoom.listFoodInRoom();
+            }
+
+            if (currRoom.getStudentsInRoom() == null) {
+                System.out.println("There are no students to duel in this room");
+            } else {
+                currRoom.listStudentsInRoom();
+            }
+
+            if (currRoom.getMonstersInRoom() == null) {
+                System.out.println("There are no monsters to duel in this room");
+            } else {
+                currRoom.listMonstersInRoom();
+            }
+
+            if (currRoom.getSpells() == null) {
+                System.out.println("There are no spells in this room");
+            } else {
+                currRoom.listSpellsInRoom();
             }
 
 
+            currRoom.listDirectionsFromRoom();
             // gets inputs from the UI
-            // updates currLoc accordingly
-            currLoc = handleUserInterface(player, currLoc, areMonsters, locations, layout);
+            // updates currRoom accordingly
+            currRoom = handleUserInterface(player, currRoom, layout);
         }
 
     }
 
-
-    /**
-     * Updates the current location based on the user interface
-     * @param player the player object passed in
-     * @param currLoc the current location
-     * @param areMonsters whether there are monsters
-     * @param locations the locations
-     * @param layout the layout
-     * @return the new location
-     */
-    private static Location handleUserInterface(Player player, Location currLoc, boolean areMonsters,
-                                                ArrayList<Location> locations, Layout layout) {
+    private static Room handleUserInterface(Player player, Room currRoom, Layout layout) {
         Scanner sc = new Scanner(System.in);
         String userInput = sc.nextLine();
 
@@ -98,28 +104,39 @@ public class GamePlayer {
                 case playerinfo:
                     Action.actionPrintPlayerInfo(player);
                     break;
-                case battle:
-                    Action.actionBattle(userInput, player, currLoc, layout);
+                case duel:
+                    try {
+                        currRoom = Action.actionDuel(userInput, player, currRoom, layout);
+                        break;
+                    } catch (Exception e) {
+                        System.out.println("You cannot duel this.");
+                    }
                     break;
-                case travel:
-                    currLoc = Action.actionGo(currLoc, areMonsters, locations, layout);
+                case travelto:
+                    try {
+                        currRoom = Action.actionGo(currRoom, userInput.substring(8).trim(), layout);
+                        break;
+                    } catch (Exception e) {
+                        System.out.println("This room does not exist");
+                    }
                     break;
-                case take:
-                    Action.actionTake(player, weaponName, currLoc);
+                case listspells:
+                    Action.actionListSpells(player);
                     break;
-                case drop:
-                    Action.actionDrop(player, weaponName, currLoc);
+                case listitems:
+                    Action.actionListItems(player);
                     break;
-                case list:
-                    Action.actionList(player);
+                case takeitem:
+                    Action.actionTake(player, userInput.substring(8).trim(), currRoom);
                     break;
-                case weaponinfo:
-                    weaponName = userInput.substring(10).trim();
-                    Action.actionPrintWeaponInfo(weaponName, player);
+                case dropitem:
+                    Action.actionDrop(player, userInput.substring(8).trim(), currRoom);
                     break;
-                case enchant:
-                    weaponName = userInput.substring(7).trim();
-                    Action.actionEnchant(player, weaponName);
+                case eatfood:
+                    Action.actionEat(player, userInput.substring(7).trim(), currRoom);
+                    break;
+                case learnspell:
+                    Action.actionLearnSpell(player, userInput.substring(10).trim(), currRoom);
                     break;
                 default :
                     Action.actionNotUnderstood(userInput);
@@ -127,37 +144,33 @@ public class GamePlayer {
             }
             break;
         }
-        return currLoc;
+        return currRoom;
 
     }
 
 
-    /**
-     * Checks if currRoom is starting room
-     * @param isStartingRoom boolean that says if startingRoom
-     * @return new value for isStartingRoom
-     */
-    public static boolean checkIfStartingLocation(boolean isStartingRoom) {
+    public static boolean checkIfStartingLocation(boolean isStartingRoom, Player player) {
         if (isStartingRoom) {
             System.out.println("Your journey begins here");
+            System.out.println("What is your name? ");
+            Scanner sc = new Scanner(System.in);
+            String name = sc.nextLine();
+            player.setName(name);
+            //TODO: Go to the Action class to make this method!
+            Action.actionChooseWand(player);
             return false;
         } else {
             return false;
         }
     }
 
-    /**
-     * Checks if currLoc is endingLocation
-     * @param currLocName name of currLoc
-     * @param endingLocation endingLocation object
-     * @return new value for isEndingRoom
-     */
-    public static boolean checkIfEndingLocation(String currLocName, Location endingLocation) {
-        if (currLocName.equals(endingLocation.getName())) {
-            System.exit(0);
+    public static boolean checkIfGreatHall(boolean visitedGreatHall, Player player) {
+        if (visitedGreatHall) return true;
+        else {
+            //TODO: Go to the Action class to make this method!
+            Action.actionSortStudent(player);
             return true;
-        } else {
-            return false;
         }
     }
+
 }

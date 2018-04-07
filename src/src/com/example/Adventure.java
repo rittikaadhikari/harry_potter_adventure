@@ -1,11 +1,8 @@
-package com.example;
-import java.net.MalformedURLException;
-import java.net.URL;
+package src.com.example;
 
 import com.google.gson.Gson;
-import com.mashape.unirest.http.HttpResponse;
-import com.mashape.unirest.http.Unirest;
-import com.mashape.unirest.http.exceptions.UnirestException;
+import src.com.example.layout.Layout;
+
 
 
 /**
@@ -25,45 +22,9 @@ public class Adventure {
      */
     public static void main(String [] arguments) {
 
-        Layout layout = Layout.loadLayoutFromFile("siebel.json");
-        if (arguments.length > 0) {
-            String url = arguments[0];
-            // Make an HTTP request to the above URL
-            try {
-                loadLayoutFromJson(url);
-            } catch (UnirestException e) {
-                System.out.println("Network not responding");
-            } catch (MalformedURLException e) {
-                System.out.println("Bad URL: " + url);
-            }
-        }
-
+        Layout layout = Layout.loadLayoutFromFile("hogwarts.json");
 
         GamePlayer.playGame(layout);
-    }
-
-    /**
-     * Makes an API request to the URL and returns a layout object
-     * depending on the json.
-     * @param url the given URL to parse json from
-     * @throws UnirestException if network times out
-     * @throws MalformedURLException if bad URL
-     */
-    public static void loadLayoutFromJson(String url) throws UnirestException, MalformedURLException {
-        final HttpResponse<String> stringHttpResponse;
-
-        // This will throw MalformedURLException if the url is malformed.
-        new URL(url);
-
-        stringHttpResponse = Unirest.get(url).asString();
-        // Check to see if the request was successful; if so, convert the payload JSON into Java objects
-        if (stringHttpResponse.getStatus() == STATUS_OK) {
-            String json = stringHttpResponse.getBody();
-            Gson gson = new Gson();
-            final Layout layout = gson.fromJson(json, Layout.class);
-            GamePlayer.playGame(layout);
-        }
-
     }
 
 
