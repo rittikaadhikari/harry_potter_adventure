@@ -70,4 +70,21 @@ public class Room {
     }
 
 
+    public Opponent findOpponentInRoom(String opponentName) throws IllegalArgumentException {
+        for (String student : studentsInRoom) {
+            if (student.toLowerCase().equals(opponentName)) {
+                return Layout.findStudentToDuel(opponentName);
+            }
+        }
+
+        for (String monster : monstersInRoom) {
+            if (monster.equalsIgnoreCase(opponentName)) {
+                return Layout.findMonsterToDuel(opponentName);
+            }
+        }
+
+        throw new IllegalArgumentException(ErrorConstants.NOT_FOUND);
+    }
+
+
 }

@@ -1,7 +1,7 @@
 package src.com.example.things;
 
 public class Food extends Thing {
-    public String bonus;
+    private String bonus;
 
     public String getBonus() {
         return bonus;

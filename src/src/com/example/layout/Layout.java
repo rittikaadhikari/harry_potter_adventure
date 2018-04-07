@@ -10,36 +10,31 @@ public class Layout {
     /**
      * the room you start in
      */
-    public String startingRoom;
+    private String startingRoom;
     /**
      * all the room objects
      */
-    public ArrayList<Room> rooms;
-<<<<<<< HEAD
-    public static ArrayList<Student> students;
-    public static ArrayList<Monster> monsters;
-=======
+    private ArrayList<Room> rooms;
     /**
      * all the student objects
      */
-    public ArrayList<Student> students;
+    private static ArrayList<Student> students;
     /**
      * all the monster objects
      */
-    public ArrayList<Monster> monsters;
+    private static ArrayList<Monster> monsters;
     /**
      * all the food objects
      */
->>>>>>> e39294e043fb01a586856482afa0d218685ae60b
-    public ArrayList<Food> food;
+    private ArrayList<Food> food;
     /**
      * all the spell objects
      */
-    public ArrayList<Spell> spells;
+    private ArrayList<Spell> spells;
     /**
      * the player object
      */
-    public Player player;
+    private Player player;
 
     /**
      * gets starting room.
@@ -116,5 +111,24 @@ public class Layout {
     }
 
 
+    public static Student findStudentToDuel(String studentName) {
+        for (Student student : students) {
+            if (student.getName().toLowerCase().equals(studentName.toLowerCase())) {
+                return student;
+            }
+        }
+
+        return null;
+    }
+
+    public static Monster findMonsterToDuel(String monsterName) {
+        for (Monster monster : monsters) {
+            if (monster.getName().toLowerCase().equalsIgnoreCase(monsterName)) {
+                return monster;
+            }
+        }
+
+        return null;
+    }
 
 }

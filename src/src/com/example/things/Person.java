@@ -1,11 +1,11 @@
 package src.com.example.things;
 
 public abstract class Person {
-    public String name;
-    public String description;
-    public double attack;
-    public double defense;
-    public double health;
+    private String name;
+    private String description;
+    private double attack;
+    private double defense;
+    private double health;
 
 
     public String getName() {
