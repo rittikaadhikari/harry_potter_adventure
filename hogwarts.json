@@ -18,7 +18,7 @@
       ]
     },
     {
-      "name": "Great Hall",
+      "name": "Great_Hall",
       "description": "The Great Hall is the main place where students receive their meals and daily owl post.\n They also have certain special events, such as the Sorting Ceremony and the Hallowe'en Feast. The large hall has enough space to hold every student, as well as the main staff and guests. \n The Hall has tall walls that reach up to the ceiling, which is covered with floating candles and enchanted to look like the sky above. \n At the front of the hall is the staff table, also known as the High Table, which is designed to house the entire Hogwarts staff. In the centre of the table is a throne chair where the present Headteacher sits. At the left of the table is a door which leads a chamber with portraits.",
       "items": [
         {
@@ -110,7 +110,7 @@
     },
     {
       "name": "Classroom",
-      "description": "A place for learning: Here, you can practice spells and add them to your repertoire.",
+      "description": "A place for learning: Here, you can practice your dueling against classmates.",
       "studentsInRoom": [
         "Draco",
         "Hermione",
@@ -120,42 +120,6 @@
         "Harry",
         "Pansy",
         "Blaise"
-      ],
-      "spells": [
-        "Accio",
-        "Aguamenti",
-        "Alohamora",
-        "Aparecium",
-        "Arania_Exumai",
-        "Arresto_Momentum",
-        "Avis",
-        "Bombarda",
-        "Colloportus",
-        "Confringo",
-        "Confundo",
-        "Diffindo",
-        "Engorgio",
-        "Episkey",
-        "Evanesco",
-        "Expelliarmus",
-        "Expulso",
-        "Finite_Incantatem",
-        "Flipendo",
-        "Geminio",
-        "Homenum_Revelio",
-        "Immobulus",
-        "Impedimenta",
-        "Impervius",
-        "Langlock",
-        "Lumos",
-        "Nox",
-        "Obliviate",
-        "Obscuro",
-        "Oppugno",
-        "Reducio",
-        "Reducto",
-        "Serpensortia",
-        "Tempus"
       ],
       "directions": [
         {
@@ -230,18 +194,135 @@
     },
     {
       "name": "Library",
-      "description": "You are in the east hallway.  You can see Einstein Bros' Bagels and a stairway.",
-      "monstersInRoom": [
-        "Coffee-Zombies"
-      ],
-      "items": [
+      "description": "You are in the Library. Here, you can learn spells and expand your knowledge!",
+      "spells": [
         {
-          "name": "bagel",
-          "damage": "12.0"
+          "spellName": "Accio",
+          "damage": "5.0"
         },
         {
-          "name": "coffee",
-          "damage": "12.0"
+          "spellName": "Aguamenti",
+          "damage": "5.0"
+        },
+        {
+          "spellName": "Alohamora",
+          "damage": "5.0"
+        },
+        {
+          "spellName": "Aparecium",
+          "damage": "2.0"
+        },
+        {
+          "spellName": "Arania_Exumai",
+          "damage": "15.0"
+        },
+        {
+          "spellName": "Arresto_Momentum",
+          "damage": "2.0"
+        },
+        {
+          "spellName": "Avis",
+          "damage": "15.0"
+        },
+        {
+          "spellName": "Bombarda",
+          "damage": "25.0"
+        },
+        {
+          "spellName": "Colloportus",
+          "damage": "2.0"
+        },
+        {
+          "spellName": "Confringo",
+          "damage": "25.0"
+        },
+        {
+          "spellName": "Confundo",
+          "damage": "10.0"
+        },
+        {
+          "spellName": "Diffindo",
+          "damage": "15.0"
+        },
+        {
+          "spellName": "Engorgio",
+          "damage": "5.0"
+        },
+        {
+          "spellName": "Evanesco",
+          "damage": "5.0"
+        },
+        {
+          "spellName": "Expelliarmus",
+          "damage": "25.0"
+        },
+        {
+          "spellName": "Expulso",
+          "damage": "20.0"
+        },
+        {
+          "spellName": "Finite_Incantatem",
+          "damage": "1.0"
+        },
+        {
+          "spellName": "Flipendo",
+          "damage": "10.0"
+        },
+        {
+          "spellName": "Geminio",
+          "damage": "5.0"
+        },
+        {
+          "spellName": "Homenum_Revelio",
+          "damage": "3.0"
+        },
+        {
+          "spellName": "Immobulus",
+          "damage": "5.0"
+        },
+        {
+          "spellName": "Impedimenta",
+          "damage": "5.0"
+        },
+        {
+          "spellName": "Impervius",
+          "damage": "3.0"
+        },
+        {
+          "spellName": "Langlock",
+          "damage": "7.0"
+        },
+        {
+          "spellName": "Lumos",
+          "damage": "3.0"
+        },
+        {
+          "spellName": "Nox",
+          "damage": "6.0"
+        },
+        {
+          "spellName": "Obliviate",
+          "damage": "50.0"
+        },
+        {
+          "spellName": "Obscuro",
+          "damage": "15.0"
+        },
+        {
+          "spellName": "Oppugno",
+          "damage": "7.0"
+        },
+        {
+          "spellName": "Reducio",
+          "damage": "3.0"
+        },
+        {
+          "spellName": "Reducto",
+          "damage": "20.0"
+        },
+        {
+          "spellName": "Serpensortia",
+          "damage": "25.0"
         }
       ],
       "directions": [
@@ -277,10 +358,28 @@
     },
     {
       "name": "Kitchen",
-      "description": "You are in Siebel 1314.  There are happy CS 126 students doing a code review.",
-      "monstersInRoom": [
-        "Code-Review-Moderator",
-        "126-Students"
+      "description": "Welcome to the Hogwarts Kitchen! The House Elves run this place, and they'll always be happy to help a hungry student! \n You can regain health by eating food.",
+      "food": [
+        {
+          "name": "Treacle_Tart",
+          "bonus": "10.0"
+        },
+        {
+          "name": "Pumpkin_Juice",
+          "bonus": "5.0"
+        },
+        {
+          "name": "Butterbeer",
+          "bonus": "20.0"
+        },
+        {
+          "name": "Chocolate_Frogs",
+          "bonus": "15.0"
+        },
+        {
+          "name": "Fish_and_Chips",
+          "bonus": "50.0"
+        },
       ],
       "directions": [
         {
@@ -316,15 +415,6 @@
     {
       "name": "Headmaster's_Office",
       "description": "You are in the basement of Siebel.  You see tables with students working and door to computer labs.",
-      "monstersInRoom": [
-        "CS125-Student-Swarm"
-      ],
-      "items": [
-        {
-          "name": "pencil",
-          "damage": "50.0"
-        }
-      ],
       "directions": [
         {
           "directionName": "Forbidden_Forest",
@@ -359,13 +449,18 @@
     {
       "name": "Hospital_Wing",
       "description": "You are in the basement of Siebel.  You see tables with students working and door to computer labs.",
-      "monstersInRoom": [
-        "CS125-Student-Swarm"
-      ],
-      "items": [
+      "food": [
         {
-          "name": "pencil",
-          "damage": "50.0"
+          "name": "Regeneration_Potion",
+          "bonus": "10.0"
+        },
+        {
+          "name": "Pepper_Up",
+          "bonus": "5.0"
+        },
+        {
+          "name": "Skelegro",
+          "bonus": "20.0"
         }
       ],
       "directions": [
@@ -402,9 +497,9 @@
   ],
   "player": {
     "name": "Firstie",
-    "attack": "20.0",
-    "defense": "20.0",
-    "health": "20.0",
+    "attack": "5.0",
+    "defense": "5.0",
+    "health": "10.0",
     "level": "0"
   },
   "monsters": [
@@ -447,58 +542,58 @@
   "students": [
     {
       "name": "Draco",
-      "description": "This monster guards against wannabe CS freshmen and transfers.",
-      "attack": "15.0",
-      "defense": "15.0",
-      "health": "15.0"
+      "description": "Draco Lucius Malfoy is a pure-blood wizard and Harry Potter's rival",
+      "attack": "50.0",
+      "defense": "45.0",
+      "health": "50.0"
     },
     {
       "name": "Hermione",
-      "description": "Never borrow money from ACM. ACM is gonna get ya.",
-      "attack": "25.0",
-      "defense": "15.0",
-      "health": "20.0"
+      "description": "The brightest witch of her age, she's the Gryffindor Princess and 1/3 of the golden trio.",
+      "attack": "55.0",
+      "defense": "55.0",
+      "health": "100.0"
     },
     {
       "name": "Neville",
-      "description": "Once students at CS@Illinois, their GPAs were broken beyond repair. As revenge, they'll break the GPA of all who venture near.",
-      "attack": "15.0",
+      "description": "Gifted in herbology, Neville's a loyal, albeit shy, friend.",
+      "attack": "5.0",
       "defense": "25.0",
-      "health": "15.0"
+      "health": "25.0"
     },
     {
       "name": "Lavender",
-      "description": "Einstein Bros' Coffee actually contained a virus, turning all students who frequent it into mindless, soulless, coffee-driven zombies... or maybe it was just the 8am.",
+      "description": "Not the most intelligent lady, but quite fashion-forward.",
       "attack": "25.0",
       "defense": "25.0",
       "health": "20.0"
     },
     {
       "name": "Ron",
-      "description": "As the word 'help' echoes in your head, these students will rip you apart, asking for 125 MP help.",
+      "description": "1/3 of the golden trio and one of Ron and Hermione's friends.",
       "attack": "30.0",
       "defense": "30.0",
       "health": "30.0"
     },
     {
       "name": "Harry",
-      "description": "Angry at you for interrupting their code review, these students serve as the primary defense of the moderator.",
-      "attack": "15.0",
-      "defense": "15.0",
-      "health": "15.0"
+      "description": "The boy who lived himself",
+      "attack": "55.0",
+      "defense": "55.0",
+      "health": "80.0"
     },
     {
       "name": "Pansy",
-      "description": "The final boss. Vanquish the moderator and your GPA is safe.",
+      "description": "Quick to hex, vicious with her words and wand",
       "attack": "45.0",
       "defense": "45.0",
       "health": "45.0"
     },
     {
       "name": "Blaise",
-      "description": "The final boss. Vanquish the moderator and your GPA is safe.",
+      "description": "He may not seem like much, but his mother is known as a black widow. \n Her husbands keep mysteriously dying, and maybe he picked up a few pointers.",
       "attack": "45.0",
-      "defense": "45.0",
+      "defense": "65.0",
       "health": "45.0"
     }
   ]
