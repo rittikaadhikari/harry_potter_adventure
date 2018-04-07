@@ -327,7 +327,9 @@
     "attack": "5.0",
     "defense": "5.0",
     "health": "10.0",
-    "level": "0"
+    "level": "0",
+    "spells": [],
+    "items": []
   },
   "monsters": [
     {
