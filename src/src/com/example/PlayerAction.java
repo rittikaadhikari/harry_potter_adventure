@@ -19,7 +19,8 @@ public enum PlayerAction {
     takeitem,
     dropitem,
     learnspell,
-    eatfood;
+    eatfood,
+    showcommand;
 
     /**
      * Check if valid enum.

@@ -12,8 +12,6 @@ import src.com.example.layout.Layout;
  */
 public class Adventure {
 
-    private static final int STATUS_OK = 200;
-
     /**
      * Accesses the json from either the given URL in arguments or the
      * default file JSON.

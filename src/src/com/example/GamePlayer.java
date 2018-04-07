@@ -31,13 +31,28 @@ public class GamePlayer {
         boolean isStartingRoom = true;
         boolean visitedGreatHall = false;
 
+        System.out.println("These are the commands: \nquit,\n" +
+                "    playerinfo,\n" +
+                "    duel,\n" +
+                "    attack,\n" +
+                "    attackwith,\n" +
+                "    disengage,\n" +
+                "    travelto,\n" +
+                "    listspells,\n" +
+                "    listitems,\n" +
+                "    takeitem,\n" +
+                "    dropitem,\n" +
+                "    learnspell,\n" +
+                "    eatfood,\n" +
+                "    showcommand");
+
         // while the user doesn't quit,
         // keep playing the game
         while (true) {
             System.out.println(currRoom.getDescription());
 
             isStartingRoom = checkIfStartingLocation(isStartingRoom, player);
-            visitedGreatHall = checkIfGreatHall(visitedGreatHall, player);
+            visitedGreatHall = checkIfGreatHall(visitedGreatHall, player, greatHall, currRoom);
 
             if (currRoom.getItems() == null) {
                 System.out.println("There are no items in this room");
@@ -143,6 +158,20 @@ public class GamePlayer {
                 case learnspell:
                     Action.actionLearnSpell(player, userInput.substring(10).trim(), currRoom);
                     break;
+                case showcommand:
+                    System.out.println("These are the commands: \n\tquit,\n" +
+                            "    playerinfo,\n" +
+                            "    duel,\n" +
+                            "    disengage,\n" +
+                            "    travelto,\n" +
+                            "    listspells,\n" +
+                            "    listitems,\n" +
+                            "    takeitem,\n" +
+                            "    dropitem,\n" +
+                            "    learnspell,\n" +
+                            "    eatfood,\n" +
+                            "    showcommand");
+                    break;
                 default :
                     Action.actionNotUnderstood(userInput);
                     break;
@@ -167,6 +196,7 @@ public class GamePlayer {
             Scanner sc = new Scanner(System.in);
             String name = sc.nextLine();
             player.setName(name);
+            System.out.println("Welcome to Hogwarts! " + player.getName());
             //TODO: Go to the Action class to make this method!
             Action.actionChooseWand(player);
             return false;
@@ -181,9 +211,10 @@ public class GamePlayer {
      * @param player player object
      * @return boolean stating whether they've visted great hall
      */
-    public static boolean checkIfGreatHall(boolean visitedGreatHall, Player player) {
+    public static boolean checkIfGreatHall(boolean visitedGreatHall, Player player, Room greatHall, Room currRoom) {
         if (visitedGreatHall) return true;
         else {
+            if (!currRoom.getName().equalsIgnoreCase(greatHall.getName())) return false;
             //TODO: Go to the Action class to make this method!
             Action.actionSortStudent(player);
             return true;
