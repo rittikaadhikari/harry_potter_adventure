@@ -1,4 +1,9 @@
 package src.com.example.things;
 
-public class Thing {
+public abstract class Thing {
+    public String name;
+
+    public String getName() {
+        return name;
+    }
 }

@@ -1,4 +1,4 @@
 package src.com.example.things;
 
-public class Opponent {
+public class Opponent extends Person {
 }

@@ -1,9 +1,6 @@
 package src.com.example.layout;
 
-import src.com.example.things.Monster;
-import src.com.example.things.Player;
-import src.com.example.things.Student;
-
+import src.com.example.things.*;
 import java.util.ArrayList;
 
 public class Layout {
@@ -11,6 +8,8 @@ public class Layout {
     public ArrayList<Room> rooms;
     public ArrayList<Student> students;
     public ArrayList<Monster> monsters;
+    public ArrayList<Food> food;
+    public ArrayList<Spell> spells;
     public Player player;
 
     public String getStartingRoom() {
@@ -33,5 +32,12 @@ public class Layout {
         return player;
     }
 
+    public ArrayList<Food> getFood() {
+        return food;
+    }
+
+    public ArrayList<Spell> getSpells() {
+        return spells;
+    }
 
 }
