@@ -10,7 +10,7 @@
           "damage": "15.0"
         }
       ],
-      "directions": ["Great Hall"]
+      "directions": ["Great_Hall"]
     },
     {
       "name": "Great_Hall",
@@ -26,13 +26,13 @@
         }
       ],
       "directions": [
-        "Forbidden Forest",
+        "Forbidden_Forest",
+        "Astronomy_Tower",
         "Classroom",
-        "Astronomy Tower",
         "Library",
-        "Kitchen",
-        "Headmasters Office",
-        "Hospital Wing"
+        "Headmasters_Office",
+        "Hospital_Wing",
+        "Kitchen"
       ]
     },
     {
@@ -52,13 +52,13 @@
         "Troll"
       ],
       "directions": [
-        "Great Hall",
+        "Great_Hall",
+        "Astronomy_Tower",
         "Classroom",
-        "Astronomy Tower",
         "Library",
-        "Kitchen",
-        "Headmasters Office",
-        "Hospital Wing"
+        "Headmasters_Office",
+        "Hospital_Wing",
+        "Kitchen"
       ]
     },
     {
@@ -75,13 +75,13 @@
         "Blaise"
       ],
       "directions": [
-        "Forbidden Forest",
-        "Great Hall",
-        "Astronomy Tower",
+        "Forbidden_Forest",
+        "Great_Hall",
+        "Astronomy_Tower",
         "Library",
-        "Kitchen",
-        "Headmasters Office",
-        "Hospital Wing"
+        "Headmasters_Office",
+        "Hospital_Wing",
+        "Kitchen"
       ]
     },
     {
@@ -94,13 +94,13 @@
         }
       ],
       "directions": [
-        "Forbidden Forest",
+        "Forbidden_Forest",
+        "Great_Hall",
         "Classroom",
-        "Astronomy Tower",
         "Library",
-        "Kitchen",
-        "Headmasters Office",
-        "Hospital Wing"
+        "Headmasters_Office",
+        "Hospital_Wing",
+        "Kitchen"
       ]
     },
     {
@@ -108,142 +108,142 @@
       "description": "You are in the Library. Here, you can learn spells and expand your knowledge!",
       "spells": [
         {
-          "spellName": "Accio",
+          "name": "Accio",
           "damage": "5.0"
         },
         {
-          "spellName": "Aguamenti",
+          "name": "Aguamenti",
           "damage": "5.0"
         },
         {
-          "spellName": "Alohamora",
+          "name": "Alohamora",
           "damage": "5.0"
         },
         {
-          "spellName": "Aparecium",
+          "name": "Aparecium",
           "damage": "2.0"
         },
         {
-          "spellName": "Arania_Exumai",
+          "name": "Arania_Exumai",
           "damage": "15.0"
         },
         {
-          "spellName": "Arresto_Momentum",
+          "name": "Arresto_Momentum",
           "damage": "2.0"
         },
         {
-          "spellName": "Avis",
+          "name": "Avis",
           "damage": "15.0"
         },
         {
-          "spellName": "Bombarda",
+          "name": "Bombarda",
           "damage": "25.0"
         },
         {
-          "spellName": "Colloportus",
+          "name": "Colloportus",
           "damage": "2.0"
         },
         {
-          "spellName": "Confringo",
+          "name": "Confringo",
           "damage": "25.0"
         },
         {
-          "spellName": "Confundo",
+          "name": "Confundo",
           "damage": "10.0"
         },
         {
-          "spellName": "Diffindo",
+          "name": "Diffindo",
           "damage": "15.0"
         },
         {
-          "spellName": "Engorgio",
+          "name": "Engorgio",
           "damage": "5.0"
         },
         {
-          "spellName": "Evanesco",
+          "name": "Evanesco",
           "damage": "5.0"
         },
         {
-          "spellName": "Expelliarmus",
+          "name": "Expelliarmus",
           "damage": "25.0"
         },
         {
-          "spellName": "Expulso",
+          "name": "Expulso",
           "damage": "20.0"
         },
         {
-          "spellName": "Finite_Incantatem",
+          "name": "Finite_Incantatem",
           "damage": "1.0"
         },
         {
-          "spellName": "Flipendo",
+          "name": "Flipendo",
           "damage": "10.0"
         },
         {
-          "spellName": "Geminio",
+          "name": "Geminio",
           "damage": "5.0"
         },
         {
-          "spellName": "Homenum_Revelio",
+          "name": "Homenum_Revelio",
           "damage": "3.0"
         },
         {
-          "spellName": "Immobulus",
+          "name": "Immobulus",
           "damage": "5.0"
         },
         {
-          "spellName": "Impedimenta",
+          "name": "Impedimenta",
           "damage": "5.0"
         },
         {
-          "spellName": "Impervius",
+          "name": "Impervius",
           "damage": "3.0"
         },
         {
-          "spellName": "Langlock",
+          "name": "Langlock",
           "damage": "7.0"
         },
         {
-          "spellName": "Lumos",
+          "name": "Lumos",
           "damage": "3.0"
         },
         {
-          "spellName": "Nox",
+          "name": "Nox",
           "damage": "6.0"
         },
         {
-          "spellName": "Obliviate",
+          "name": "Obliviate",
           "damage": "50.0"
         },
         {
-          "spellName": "Obscuro",
+          "name": "Obscuro",
           "damage": "15.0"
         },
         {
-          "spellName": "Oppugno",
+          "name": "Oppugno",
           "damage": "7.0"
         },
         {
-          "spellName": "Reducio",
+          "name": "Reducio",
           "damage": "3.0"
         },
         {
-          "spellName": "Reducto",
+          "name": "Reducto",
           "damage": "20.0"
         },
         {
-          "spellName": "Serpensortia",
+          "name": "Serpensortia",
           "damage": "25.0"
         }
       ],
       "directions": [
-        "Forbidden Forest",
+        "Forbidden_Forest",
+        "Great_Hall",
+        "Astronomy_Tower",
         "Classroom",
-        "Astronomy Tower",
-        "Great Hall",
-        "Kitchen",
-        "Headmaster's Office",
-        "Hospital Wing"
+        "Headmasters_Office",
+        "Hospital_Wing",
+        "Kitchen"
       ]
     },
     {
@@ -272,26 +272,26 @@
         },
       ],
       "directions": [
-        "Forbidden Forest",
-        "Great Hall",
-        "Astronomy Tower",
+        "Forbidden_Forest",
+        "Great_Hall",
+        "Astronomy_Tower",
+        "Classroom",
         "Library",
-        "Great Hall",
-        "Headmasters Office",
-        "Hospital Wing"
+        "Headmasters_Office",
+        "Hospital_Wing"
       ]
     },
     {
       "name": "Headmaster's_Office",
       "description": "The Headmaster's office is the office in Hogwarts Castle in which the current headmasters or headmistresses of Hogwarts School of Witchcraft and Wizardry work during the school year.",
       "directions": [
-        "Forbidden Forest",
-        "Great Hall",
-        "Astronomy Tower",
+        "Forbidden_Forest",
+        "Great_Hall",
+        "Astronomy_Tower",
+        "Classroom",
         "Library",
-        "Kitchen",
-        "Great Hall",
-        "Hospital Wing"
+        "Hospital_Wing",
+        "Kitchen"
       ]
     },
     {
@@ -312,13 +312,13 @@
         }
       ],
       "directions": [
-        "Forbidden Forest",
-        "Great Hall",
-        "Astronomy Tower",
+        "Forbidden_Forest",
+        "Great_Hall",
+        "Astronomy_Tower",
+        "Classroom",
         "Library",
-        "Kitchen",
-        "Headmasters Office",
-        "Great Hall"
+        "Headmasters_Office",
+        "Kitchen"
       ]
     }
   ],
