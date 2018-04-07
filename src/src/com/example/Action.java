@@ -8,6 +8,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
+/**
+ * Represents the actions a player can take during a game.
+ *
+ * @author Rittika Adhikari & Sejal Parmar
+ */
 public class Action {
     /**
      * Prints that system doesn't understand action
@@ -41,10 +46,11 @@ public class Action {
     }
 
     /**
+     * Duels an opponent in the room
      *
-     * @param userInput
-     * @param player
-     * @param currRoom
+     * @param userInput the given user input
+     * @param player the player object
+     * @param currRoom the current room
      */
     public static Room actionDuel(String userInput, Player player, Room currRoom, Layout layout) {
         if (currRoom.getMonstersInRoom() == null && currRoom.getStudentsInRoom() == null) {
@@ -77,6 +83,12 @@ public class Action {
         throw new IllegalArgumentException(ErrorConstants.NOT_FOUND);
     }
 
+    /**
+     * Engage an opponent in duel
+     * @param player the player object
+     * @param opponent the opponent to engage
+     * @return the new player object
+     */
     private static Player actionEngageDuel(Player player, Opponent opponent) {
         boolean canDuel = true;
         double originalOpponentAttack = opponent.getAttack();
@@ -148,14 +160,28 @@ public class Action {
     }
 
 
+    /**
+     * List all of the spells learned by the player
+     * @param player the player object
+     */
     public static void actionListSpells(Player player) {
         player.listSpellsLearned();
     }
 
+    /**
+     * List all of the items carried by the player
+     * @param player the player object
+     */
     public static void actionListItems(Player player) {
         player.listItemsCarrying();
     }
 
+    /**
+     * Drop an item
+     * @param player the player object
+     * @param itemName the name of the item
+     * @param currRoom the current room
+     */
     public static void actionDrop(Player player, String itemName, Room currRoom) {
         Item item;
         try {
@@ -170,6 +196,12 @@ public class Action {
         System.out.println("You dropped " + item.getName());
     }
 
+    /**
+     * Take an item from a room
+     * @param player the player object
+     * @param itemName the item name
+     * @param currRoom the current room
+     */
     public static void actionTake(Player player, String itemName, Room currRoom) {
         Item item;
         try {
@@ -184,6 +216,12 @@ public class Action {
         System.out.println("You took " + item.getName());
     }
 
+    /**
+     * Eat food from a room
+     * @param player the player object
+     * @param foodName the food to eat
+     * @param currRoom the current room
+     */
     public static void actionEat(Player player, String foodName, Room currRoom) {
         Food food;
         try {
@@ -197,6 +235,13 @@ public class Action {
         System.out.println("Yum! You ate " + food.getName());
     }
 
+    /**
+     * Moves a player to another room
+     * @param currRoom the current room
+     * @param directionName the direction to go in
+     * @param layout the layout
+     * @return the new room
+     */
     public static Room actionGo(Room currRoom, String directionName, Layout layout) {
         try {
             return layout.findRoom(layout.getRooms(), directionName);
@@ -212,6 +257,12 @@ public class Action {
         throw new IllegalArgumentException(ErrorConstants.NOT_FOUND);
     }
 
+    /**
+     * Learns a spell from the room
+     * @param player the player object
+     * @param spellName the name of the spell
+     * @param currRoom the current room
+     */
     public static void actionLearnSpell(Player player, String spellName, Room currRoom) {
         Spell spell = null;
         try {
@@ -235,7 +286,8 @@ public class Action {
     /**
      * TODO: Here you can ask a series of Sorting Hat questions to sort your player
      * when they first enter the Great Hall.
-     * @param player
+     *
+     * @param player the player object
      */
     public static void actionSortStudent(Player player) {
 
@@ -246,7 +298,10 @@ public class Action {
      * when they first enter Ollivanders.
      *
      * Then, you can assign special damage powers to the wand in the room accordingly!
-     * @param player
+     *
+     * @param player the player object
+     *
+     *
      */
     public static void actionChooseWand(Player player) {
 

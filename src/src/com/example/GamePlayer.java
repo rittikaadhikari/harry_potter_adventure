@@ -12,7 +12,7 @@ import java.util.Scanner;
 /**
  * The module that runs the game from given JSON.
  *
- * @author Rittika Adhikari
+ * @author Rittika Adhikari & Sejal Parmar
  */
 public class GamePlayer {
 
@@ -78,14 +78,19 @@ public class GamePlayer {
 
     }
 
+    /**
+     * Handles the user's inputs according to their first character.
+     * @param player the player object
+     * @param currRoom the current room
+     * @param layout the layout
+     * @return the next room
+     */
     private static Room handleUserInterface(Player player, Room currRoom, Layout layout) {
         Scanner sc = new Scanner(System.in);
         String userInput = sc.nextLine();
 
         while (true) {
             String[] splitInput = userInput.split("\\s+");
-
-            String weaponName = userInput.substring(4).trim();
 
             try {
                 PlayerAction.getEnum(splitInput[0].toLowerCase());
@@ -149,6 +154,12 @@ public class GamePlayer {
     }
 
 
+    /**
+     * Checks if the player is in the starting room
+     * @param isStartingRoom boolean
+     * @param player player object
+     * @return boolean stating whether this is the starting room
+     */
     public static boolean checkIfStartingLocation(boolean isStartingRoom, Player player) {
         if (isStartingRoom) {
             System.out.println("Your journey begins here");
@@ -164,6 +175,12 @@ public class GamePlayer {
         }
     }
 
+    /**
+     * Checks if the player is in the great hall & hasn't visited the great hall
+     * @param visitedGreatHall boolean stating if player has visited great hall
+     * @param player player object
+     * @return boolean stating whether they've visted great hall
+     */
     public static boolean checkIfGreatHall(boolean visitedGreatHall, Player player) {
         if (visitedGreatHall) return true;
         else {

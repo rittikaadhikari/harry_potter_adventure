@@ -3,8 +3,7 @@ package src.com.example;
 /**
  * The module consisting of all possible error messages.
  *
- * @author Rittika Adhikari
- * @netid rittika2
+ * @author Rittika Adhikari & Sejal Parmar
  */
 public class ErrorConstants {
     public static final String NOT_FOUND = "This does not exist.";

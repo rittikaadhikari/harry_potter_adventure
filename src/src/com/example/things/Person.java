@@ -1,5 +1,10 @@
 package src.com.example.things;
 
+/**
+ * An abstract class representing people.
+ *
+ * @author Rittika Adhikari & Sejal Parmar
+ */
 public abstract class Person {
     private String name;
     private String description;
@@ -45,8 +50,9 @@ public abstract class Person {
     }
 
     /**
-     *
-     * @return
+     * The toString method that returns the name, description, attack, defense, and health
+     * of the person at this moment.
+     * @return a string containing info about person.
      */
     @Override
     public String toString() {

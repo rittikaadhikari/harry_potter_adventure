@@ -6,10 +6,9 @@ import src.com.example.layout.Layout;
 
 
 /**
- * Takes the user on a wild adventure around Siebel Center.
+ * Takes the user on a wild adventure around Hogwarts.
  *
- * @author Rittika Adhikari
- * @netid rittika2
+ * @author Rittika Adhikari & Sejal Parmar
  */
 public class Adventure {
 

@@ -5,66 +5,42 @@ import src.com.example.things.*;
 
 import java.util.ArrayList;
 
+/**
+ * This class represents the format of a room.
+ *
+ * @author Rittika Adhikari & Sejal Parmar
+ */
 public class Room {
-    /** name of the room */
-    public String name;
-    /** the room's description */
-    public String description;
-    /** the items the room contains */
-    public ArrayList<Item> items;
-    /** where you can go from this room */
-    public ArrayList<String> directions;
-    /** students you can duel, if any */
-    public ArrayList<String> studentsInRoom;
-    /** monsters you can duel, if any */
-    public ArrayList<String> monstersInRoom;
-    public ArrayList<Food> food;
-    public ArrayList<Spell> spells;
+    private String name;
+    private String description;
+    private ArrayList<Item> items;
+    private ArrayList<String> directions;
+    private ArrayList<String> studentsInRoom;
+    private ArrayList<String> monstersInRoom;
+    private ArrayList<Food> food;
+    private ArrayList<Spell> spells;
 
-    /**
-     * gets room description.
-     * @return description
-     */
+
     public String getDescription() {
         return description;
     }
 
-    /**
-     * gets room's items.
-     * @return items
-     */
     public ArrayList<Item> getItems() {
         return items;
     }
 
-    /**
-     * gets where you can go from this room.
-     * @return directions
-     */
     public ArrayList<String> getDirections() {
         return directions;
     }
 
-    /**
-     * gets room name.
-     * @return name
-     */
     public String getName() {
         return name;
     }
 
-    /**
-     * gets all the students in the room.
-     * @return students
-     */
     public ArrayList<String> getStudentsInRoom() {
         return studentsInRoom;
     }
 
-    /**
-     * gets all the monsters in the room.
-     * @return monsters
-     */
     public ArrayList<String> getMonstersInRoom() {
         return monstersInRoom;
     }
@@ -74,6 +50,13 @@ public class Room {
     public ArrayList<Spell> getSpells() { return spells; }
 
 
+    /**
+     * Finds the opponent in room
+     * @param opponentName the name of the opponent to duel
+     * @param layout the layout
+     * @return the opponent object to duel
+     * @throws IllegalArgumentException if not found
+     */
     public Opponent findOpponentInRoom(String opponentName, Layout layout) throws IllegalArgumentException {
         System.out.println(opponentName);
         if (studentsInRoom != null) {
@@ -96,6 +79,12 @@ public class Room {
         throw new IllegalArgumentException(ErrorConstants.NOT_FOUND);
     }
 
+    /**
+     * Finds a spell in the room
+     * @param spellName the name of the spell
+     * @return the spell object
+     * @throws IllegalArgumentException if not found
+     */
     public Spell findSpellInRoom(String spellName) throws IllegalArgumentException {
         if (spells == null) throw new IllegalArgumentException(ErrorConstants.NOT_FOUND);
         for (Spell spell : spells) {
@@ -105,6 +94,12 @@ public class Room {
         throw new IllegalArgumentException(ErrorConstants.NOT_FOUND);
     }
 
+    /**
+     * Finds the food in the room
+     * @param foodName the name of the food
+     * @return the food
+     * @throws IllegalArgumentException if not found
+     */
     public Food findFoodInRoom(String foodName) throws IllegalArgumentException {
         if (food == null) throw new IllegalArgumentException(ErrorConstants.NOT_FOUND);
         for (Food food : food) {
@@ -114,6 +109,12 @@ public class Room {
         throw new IllegalArgumentException(ErrorConstants.NOT_FOUND);
     }
 
+    /**
+     * Finds an item in the room
+     * @param itemName the name of item
+     * @return the item
+     * @throws IllegalArgumentException if not found
+     */
     public Item findItemInRoom(String itemName) throws IllegalArgumentException {
         if (items == null) throw new IllegalArgumentException(ErrorConstants.NOT_FOUND);
         for (Item item : items) {
@@ -123,18 +124,33 @@ public class Room {
         throw new IllegalArgumentException(ErrorConstants.NOT_FOUND);
     }
 
+    /**
+     * Adds an item to the room
+     * @param item the item to add
+     */
     public void addItem(Item item) {
         items.add(item);
     }
 
+    /**
+     * Removes an item from room
+     * @param item the item to remove
+     */
     public void removeItem(Item item) {
         items.remove(item);
     }
 
+    /**
+     * Removes a spell from room
+     * @param spell the spell to remove
+     */
     public void removeSpell(Spell spell) {
         spells.remove(spell);
     }
 
+    /**
+     * Lists the items in the room
+     */
     public void listItemsInRoom() {
         String output = "The items in this room are: ";
         for (Item item : items) {
@@ -144,6 +160,9 @@ public class Room {
         System.out.println(output);
     }
 
+    /**
+     * Lists the food in the room
+     */
     public void listFoodInRoom() {
         String output = "The food in this room is: ";
         for (Food food : food) {
@@ -153,6 +172,9 @@ public class Room {
         System.out.println(output);
     }
 
+    /**
+     * Lists the students in the room
+     */
     public void listStudentsInRoom() {
         String output = "You can duel the following students: ";
         for (String student : studentsInRoom) {
@@ -162,6 +184,9 @@ public class Room {
         System.out.println(output);
     }
 
+    /**
+     * Lists the monsters in the room
+     */
     public void listMonstersInRoom() {
         String output = "You can duel the following monsters: ";
         for (String monster : monstersInRoom) {
@@ -171,6 +196,9 @@ public class Room {
         System.out.println(output);
     }
 
+    /**
+     * Lists the directions in the room
+     */
     public void listDirectionsFromRoom() {
         String output = "You can go: ";
         for (String direction : directions) {
@@ -180,7 +208,9 @@ public class Room {
         System.out.println(output);
     }
 
-
+    /**
+     * Lists the spells in the room.
+     */
     public void listSpellsInRoom() {
         String output = "You can learn the following spells: ";
         for (Spell spell : spells) {

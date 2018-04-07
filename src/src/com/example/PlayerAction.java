@@ -3,6 +3,8 @@ package src.com.example;
 /**
  * An enum consisting of all possible actions
  * a player can take.
+ *
+ * @author Rittika Adhikari & Sejal Parmar
  */
 public enum PlayerAction {
     quit,

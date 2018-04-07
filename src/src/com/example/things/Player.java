@@ -4,6 +4,11 @@ import src.com.example.ErrorConstants;
 
 import java.util.ArrayList;
 
+/**
+ * Represents a player.
+ *
+ * @author Rittika Adhikari & Sejal Parmar
+ */
 public class Player extends Person {
     private int level;
     private ArrayList<Spell> spells;
@@ -24,8 +29,8 @@ public class Player extends Person {
     public void setLevel(int level) { this.level = level; }
 
     /**
-     *
-     * @return
+     * Represents the vitals of a player.
+     * @return a string of the vitals of a player
      */
     @Override
     public String toString() {
@@ -34,6 +39,11 @@ public class Player extends Person {
         return output;
     }
 
+    /**
+     * Attack an opponent
+     * @param opponent the opponent to attack
+     * @return a boolean stating whether the attack was successful
+     */
     public boolean attackOpponent(Opponent opponent) {
         double damageOnOpponent = getAttack() - opponent.getDefense();
         if (damageOnOpponent < 0) {
@@ -55,6 +65,12 @@ public class Player extends Person {
         return true;
     }
 
+    /**
+     * Attack an opponent with an object
+     * @param opponent the opponent to attack
+     * @param thingName the thing to attack with
+     * @return a boolean stating whether the attack was successful
+     */
     public boolean attackWithOpponent(Opponent opponent, String thingName) {
         Spell sp = null;
         for (Spell spell : spells) {
@@ -98,6 +114,9 @@ public class Player extends Person {
         }
     }
 
+    /**
+     * Lists the spells learned.
+     */
     public void listSpellsLearned() {
         if (spells == null) {
             System.out.println("You have not learned any spells");
@@ -112,6 +131,9 @@ public class Player extends Person {
         System.out.println(spellsLearned);
     }
 
+    /**
+     * Lists the items carried.
+     */
     public void listItemsCarrying() {
         if (items == null) {
             System.out.println("You have not gotten any items");
@@ -127,6 +149,11 @@ public class Player extends Person {
 
     }
 
+    /**
+     * Finds an item from what is carried
+     * @param itemName the item to find
+     * @return the item object
+     */
     public Item findItem(String itemName) {
         if (items == null) throw new IllegalArgumentException(ErrorConstants.NOT_FOUND);
 
@@ -137,6 +164,11 @@ public class Player extends Person {
         throw new IllegalArgumentException(ErrorConstants.NOT_FOUND);
     }
 
+    /**
+     * Finds a spell from learned
+     * @param spellName the spell to find
+     * @return the spell object
+     */
     public Spell findSpell(String spellName) {
         if (spells == null) throw new IllegalArgumentException(ErrorConstants.NOT_FOUND);
 
@@ -147,18 +179,34 @@ public class Player extends Person {
         throw new IllegalArgumentException(ErrorConstants.NOT_FOUND);
     }
 
+    /**
+     * Drops an item from arsenal
+     * @param item the item to drop
+     */
     public void dropItem(Item item) {
         items.remove(item);
     }
 
+    /**
+     * Adds an item to arsenal
+     * @param item the item to take
+     */
     public void takeItem(Item item) {
         items.add(item);
     }
 
+    /**
+     * Learns a spell from a room
+     * @param spell the spell to learn
+     */
     public void learnSpell(Spell spell) {
         spells.add(spell);
     }
 
+    /**
+     * Eats food from room
+     * @param food the food to eat
+     */
     public void takeFood(Food food) {
         setHealth(getHealth() + food.getBonus());
     }

@@ -7,69 +7,36 @@ import src.com.example.things.*;
 
 import java.util.ArrayList;
 
+/**
+ * This class represents the overall layout of the
+ * JSON/Adventure game.
+ *
+ * @author Rittika Adhikari & Sejal Parmar
+ */
 public class Layout {
-    /**
-     * the room you start in
-     */
     private String startingRoom;
-    /**
-     * all the room objects
-     */
     private ArrayList<Room> rooms;
-    /**
-     * all the student objects
-     */
     private ArrayList<Student> students;
-    /**
-     * all the monster objects
-     */
     private ArrayList<Monster> monsters;
-    /**
-     * the player object
-     */
     private Player player;
 
-    /**
-     * gets starting room.
-     *
-     * @return starting room as String
-     */
+
     public String getStartingRoom() {
         return startingRoom;
     }
 
-    /**
-     * gets all the rooms in an arraylist.
-     *
-     * @return rooms
-     */
     public ArrayList<Room> getRooms() {
         return rooms;
     }
 
-    /**
-     * gets all students in an arraylist.
-     *
-     * @return students
-     */
     public ArrayList<Student> getStudents() {
         return students;
     }
 
-    /**
-     * gets all monsters in arraylist.
-     *
-     * @return monsters
-     */
     public ArrayList<Monster> getMonsters() {
         return monsters;
     }
 
-    /**
-     * gets the player object
-     *
-     * @return player
-     */
     public Player getPlayer() {
         return player;
     }
@@ -87,6 +54,11 @@ public class Layout {
     }
 
 
+    /**
+     * Finds a student to duel in the layout
+     * @param studentName the name of the student
+     * @return the student object to duel
+     */
     public Student findStudentToDuel(String studentName) {
         for (Student student : students) {
             if (student.getName().equalsIgnoreCase(studentName)) {
@@ -97,6 +69,11 @@ public class Layout {
         return null;
     }
 
+    /**
+     * Finds a monster to duel in the layout
+     * @param monsterName the name of the monster
+     * @return the monster object to duel
+     */
     public Monster findMonsterToDuel(String monsterName) {
         for (Monster monster : monsters) {
             if (monster.getName().equalsIgnoreCase(monsterName)) {
@@ -107,6 +84,12 @@ public class Layout {
         return null;
     }
 
+    /**
+     * Find the room to go to.
+     * @param rooms the arraylist of rooms
+     * @param startingRoom the name of the room to find
+     * @return the room object to go to.
+     */
     public Room findRoom(ArrayList<Room> rooms, String startingRoom) {
         for (Room room : rooms) {
             if (startingRoom.equalsIgnoreCase(room.getName())) return room;
