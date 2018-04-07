@@ -8,8 +8,8 @@ import java.util.ArrayList;
 public class Layout {
     public String startingRoom;
     public ArrayList<Room> rooms;
-    public ArrayList<Student> students;
-    public ArrayList<Monster> monsters;
+    public static ArrayList<Student> students;
+    public static ArrayList<Monster> monsters;
     public ArrayList<Food> food;
     public ArrayList<Spell> spells;
     public Player player;
@@ -51,5 +51,7 @@ public class Layout {
         Gson gson = new Gson();
         return gson.fromJson(Data.getFileContentsAsString(filename), Layout.class);
     }
+
+
 
 }

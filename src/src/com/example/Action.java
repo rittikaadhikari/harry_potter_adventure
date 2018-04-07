@@ -1,6 +1,7 @@
 package src.com.example;
 
 import src.com.example.layout.Room;
+import src.com.example.things.Opponent;
 import src.com.example.things.Player;
 
 import java.util.ArrayList;
@@ -40,79 +41,24 @@ public class Action {
     /**
      *
      * @param userInput
-     * @param princess
-     * @param currLoc
-     * @param layout
+     * @param player
+     * @param currRoom
      */
     public static void actionDuel(String userInput, Player player, Room currRoom) {
         if (currRoom.getMonstersInRoom().isEmpty()) {
-            System.out.println("There are no monsters to battle.");
+            System.out.println("There are no opponents to battle.");
             return;
         }
 
-        String monsterName = userInput.substring(4).trim().toLowerCase();
-        Monster monster;
+        String opponentName = userInput.substring(4).trim().toLowerCase();
+        Opponent opponent;
         try {
-            monster =
-        
-
-    }
-
-
-
-    public static void actionBattle(String userInput, Princess princess, Location currLoc, Layout layout) {
-        if (currLoc instanceof Castle) {
-            System.out.println("There are no monsters to battle.");
-            return;
-        }
-
-        String monsterName = userInput.substring(6).trim().toLowerCase();
-        Monster monster;
-        try {
-            monster = ((BattleField)currLoc).findMonsterInBattlefield(monsterName);
-        } catch(Exception e) {
-            System.out.println("This monster does not exist.");
-            return;
-        }
-
-
-        ((BattleField)currLoc).battle(princess, monster);
-        layout.setStartingTime(layout.getStartingTime() + currLoc.nextEpoch());
-        System.out.println("After this epoch, it has been " + layout.getStartingTime() + " days.");
-
-    }
-
-    /**
-     * Enchants a weapon in the princess' arsenal.
-     * @param princess the princess object
-     * @param weaponName the weapon name
-     */
-    public static void actionEnchant(Princess princess, String weaponName) {
-        Weapon weapon;
-        try {
-            weapon = princess.findWeaponInArsenal(weaponName);
+            opponent = currRoom.findOpponent(opponentName);
         } catch (Exception e) {
-            System.out.println("You cannot enchant this.");
+            System.out.println("This opponent does not exist.");
             return;
         }
 
-        princess.enchant(weapon);
-    }
-
-    /**
-     * Prints out the weapon info
-     * @param weaponName the name of the weapon
-     * @param princess the princess player
-     */
-    public static void actionPrintWeaponInfo(String weaponName, Princess princess) {
-        Weapon weapon;
-        try {
-            weapon = princess.findWeaponInArsenal(weaponName);
-        } catch (Exception e) {
-            System.out.println("You do not have this weapon.");
-            return;
-        }
-        System.out.println(weapon.toString());
     }
 
     /**

@@ -1,6 +1,8 @@
 package src.com.example.layout;
 
+import src.com.example.ErrorConstants;
 import src.com.example.things.Item;
+import src.com.example.things.Opponent;
 import src.com.example.things.Thing;
 
 import java.util.ArrayList;
@@ -36,4 +38,6 @@ public class Room {
     public ArrayList<String> getMonstersInRoom() {
         return monstersInRoom;
     }
+
+
 }
