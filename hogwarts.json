@@ -20,9 +20,9 @@
     {
       "name": "Great Hall",
       "description": "The Great Hall is the main place where students receive their meals and daily owl post.\n They also have certain special events, such as the Sorting Ceremony and the Hallowe'en Feast. The large hall has enough space to hold every student, as well as the main staff and guests. \n The Hall has tall walls that reach up to the ceiling, which is covered with floating candles and enchanted to look like the sky above. \n At the front of the hall is the staff table, also known as the High Table, which is designed to house the entire Hogwarts staff. In the centre of the table is a throne chair where the present Headteacher sits. At the left of the table is a door which leads a chamber with portraits.",
-	  "items": [
+      "items": [
         {
-         "name": "Treacle Tart",
+          "name": "Treacle Tart",
           "damage": "1.0"
         },
         {
@@ -70,7 +70,13 @@
           "damage": "8.0"
         }
       ],
-      "monstersInRoom": ["Acromantula", "Giant", "Cerberus", "Blast-Ended_Skrewt", "Troll" ],
+      "monstersInRoom": [
+        "Acromantula",
+        "Giant",
+        "Cerberus",
+        "Blast-Ended_Skrewt",
+        "Troll"
+      ],
       "directions": [
         {
           "directionName": "Great_Hall",
@@ -105,15 +111,60 @@
     {
       "name": "Classroom",
       "description": "A place for learning: Here, you can practice spells and add them to your repertoire.",
-      "spells": ["Accio", "Aguamenti", "Alohamora", "Aparecium", "Arania Exumai", "Arresto Momentum", "Avis", "Bombarda", "Colloportus", "Confringo", "Confundo", "Diffindo", "Engorgio", "Episkey", "Evanesco", "Expelliarmus", "Expulso", "Finite_Incantatem", "Flipendo", "Geminio", "Homenum_Revelio", "Immobulus", "Impedimenta", "Impervius", "Langlock", "Lumos", "Nox", "Obliviate", "Obscuro", "Oppugno", "Reducio", "Reducto", "Serpensortia", "Tempus" ],
+      "studentsInRoom": [
+        "Draco",
+        "Hermione",
+        "Neville",
+        "Lavender",
+        "Ron",
+        "Harry",
+        "Pansy",
+        "Blaise"
+      ],
+      "spells": [
+        "Accio",
+        "Aguamenti",
+        "Alohamora",
+        "Aparecium",
+        "Arania_Exumai",
+        "Arresto_Momentum",
+        "Avis",
+        "Bombarda",
+        "Colloportus",
+        "Confringo",
+        "Confundo",
+        "Diffindo",
+        "Engorgio",
+        "Episkey",
+        "Evanesco",
+        "Expelliarmus",
+        "Expulso",
+        "Finite_Incantatem",
+        "Flipendo",
+        "Geminio",
+        "Homenum_Revelio",
+        "Immobulus",
+        "Impedimenta",
+        "Impervius",
+        "Langlock",
+        "Lumos",
+        "Nox",
+        "Obliviate",
+        "Obscuro",
+        "Oppugno",
+        "Reducio",
+        "Reducto",
+        "Serpensortia",
+        "Tempus"
+      ],
       "directions": [
         {
           "directionName": "Forbidden_Forest",
           "room": "Forbidden_Forest"
         },
         {
-          "directionName": "Classroom",
-          "room": "Classroom"
+          "directionName": "Great_Hall",
+          "room": "Great_Hall"
         },
         {
           "directionName": "Astronomy_Tower",
@@ -138,15 +189,11 @@
       ]
     },
     {
-      "name": "Siebel1112",
-      "description": "You are in Siebel 1112.  There is space for two code reviews in this room.",
+      "name": "Astronomy_Tower",
+      "description": "The Astronomy Tower is the tallest tower at Hogwarts Castle. \n It is where students study the stars and planets through their telescopes in Astronomy lessons with Professor Aurora Sinistra.",
       "items": [
         {
-          "name": "USB-C-connector",
-          "damage": "10.0"
-        },
-        {
-          "name": "grading-rubric",
+          "name": "telescope",
           "damage": "10.0"
         }
       ],
@@ -160,8 +207,8 @@
           "room": "Classroom"
         },
         {
-          "directionName": "Astronomy_Tower",
-          "room": "Astronomy_Tower"
+          "directionName": "Great_Hall",
+          "room": "Great_Hall"
         },
         {
           "directionName": "Library",
@@ -182,9 +229,11 @@
       ]
     },
     {
-      "name": "SiebelEastHallway",
+      "name": "Library",
       "description": "You are in the east hallway.  You can see Einstein Bros' Bagels and a stairway.",
-      "monstersInRoom": ["Coffee-Zombies"],
+      "monstersInRoom": [
+        "Coffee-Zombies"
+      ],
       "items": [
         {
           "name": "bagel",
@@ -209,8 +258,8 @@
           "room": "Astronomy_Tower"
         },
         {
-          "directionName": "Library",
-          "room": "Library"
+          "directionName": "Great_Hall",
+          "room": "Great_Hall"
         },
         {
           "directionName": "Kitchen",
@@ -227,9 +276,12 @@
       ]
     },
     {
-      "name": "Siebel1314",
+      "name": "Kitchen",
       "description": "You are in Siebel 1314.  There are happy CS 126 students doing a code review.",
-      "monstersInRoom": ["Code-Review-Moderator", "126-Students"],
+      "monstersInRoom": [
+        "Code-Review-Moderator",
+        "126-Students"
+      ],
       "directions": [
         {
           "directionName": "Forbidden_Forest",
@@ -248,8 +300,8 @@
           "room": "Library"
         },
         {
-          "directionName": "Kitchen",
-          "room": "Kitchen"
+          "directionName": "Great_Hall",
+          "room": "Great_Hall"
         },
         {
           "directionName": "Headmaster's_Office",
@@ -262,9 +314,11 @@
       ]
     },
     {
-      "name": "SiebelBasement",
+      "name": "Headmaster's_Office",
       "description": "You are in the basement of Siebel.  You see tables with students working and door to computer labs.",
-      "monstersInRoom": ["CS125-Student-Swarm"],
+      "monstersInRoom": [
+        "CS125-Student-Swarm"
+      ],
       "items": [
         {
           "name": "pencil",
@@ -293,24 +347,61 @@
           "room": "Kitchen"
         },
         {
-          "directionName": "Headmaster's_Office",
-          "room": "Headmaster's_Office"
+          "directionName": "Great_Hall",
+          "room": "Great_Hall"
         },
         {
           "directionName": "Hospital_Wing",
           "room": "Hospital_Wing"
         }
       ]
+    },
+    {
+      "name": "Hospital_Wing",
+      "description": "You are in the basement of Siebel.  You see tables with students working and door to computer labs.",
+      "monstersInRoom": [
+        "CS125-Student-Swarm"
+      ],
+      "items": [
+        {
+          "name": "pencil",
+          "damage": "50.0"
+        }
+      ],
+      "directions": [
+        {
+          "directionName": "Forbidden_Forest",
+          "room": "Forbidden_Forest"
+        },
+        {
+          "directionName": "Classroom",
+          "room": "Classroom"
+        },
+        {
+          "directionName": "Astronomy_Tower",
+          "room": "Astronomy_Tower"
+        },
+        {
+          "directionName": "Library",
+          "room": "Library"
+        },
+        {
+          "directionName": "Kitchen",
+          "room": "Kitchen"
+        },
+        {
+          "directionName": "Great_Hall",
+          "room": "Great_Hall"
+        },
+        {
+          "directionName": "Great_Hall",
+          "room": "Great_Hall"
+        }
+      ]
     }
   ],
   "player": {
-    "name": "Student",
-    "items": [
-      {
-        "name": "laptop",
-        "damage": "5.0"
-      }
-    ],
+    "name": "Firstie",
     "attack": "20.0",
     "defense": "20.0",
     "health": "20.0",
@@ -318,56 +409,97 @@
   },
   "monsters": [
     {
-      "name": "Guardian-of-Admissions",
+      "name": "Acromantula",
+      "description": "Acromantulas sport eight, black eyes (white if blind) and are typically covered in thick black hair, with a leg span that can reach up to fifteen feet. \n They are the size of a carthorse, if adult. They possess a set of giant chelicerae which they use to eat live prey or their own dead kin. Their pincers produce a clicking sound when they are agitated or excited. \n They also secrete poison when excited. \n They are sentient, and capable of human speech",
+      "attack": "15.0",
+      "defense": "15.0",
+      "health": "15.0"
+    },
+    {
+      "name": "Giant",
+      "description": "A giant is a very large humanoid which can potentially grow to approximately twenty five feet tall and appear to be a large human.",
+      "attack": "25.0",
+      "defense": "15.0",
+      "health": "20.0"
+    },
+    {
+      "name": "Blast-Ended_Skrewt",
+      "description": "The Blast-Ended Skrewt is a hybrid creature bred by Rubeus Hagrid in the autumn of 1994, by crossing Manticores and Fire crabs.",
+      "attack": "15.0",
+      "defense": "25.0",
+      "health": "15.0"
+    },
+    {
+      "name": "Troll",
+      "description": "A Troll is a magical creature of prodigious strength and immense stupidity. In fact, they are so stupid that they actually had a wizarding exam failing grade named after them.",
+      "attack": "25.0",
+      "defense": "25.0",
+      "health": "20.0"
+    },
+    {
+      "name": "Cerberus",
+      "description": "Three-headed dogs are very rare creatures. It is unknown if, like the Runespoor, each head serves a different purpose. \n Their great weakness is the inability to resist falling asleep to the sound of music.",
+      "attack": "30.0",
+      "defense": "30.0",
+      "health": "30.0"
+    }
+  ],
+  "students": [
+    {
+      "name": "Draco",
       "description": "This monster guards against wannabe CS freshmen and transfers.",
       "attack": "15.0",
       "defense": "15.0",
       "health": "15.0"
     },
     {
-      "name": "ACM-Mafia",
+      "name": "Hermione",
       "description": "Never borrow money from ACM. ACM is gonna get ya.",
       "attack": "25.0",
       "defense": "15.0",
       "health": "20.0"
     },
     {
-      "name": "Ghosts-of-Student-GPAs",
+      "name": "Neville",
       "description": "Once students at CS@Illinois, their GPAs were broken beyond repair. As revenge, they'll break the GPA of all who venture near.",
       "attack": "15.0",
       "defense": "25.0",
       "health": "15.0"
     },
     {
-      "name": "Coffee-Zombies",
+      "name": "Lavender",
       "description": "Einstein Bros' Coffee actually contained a virus, turning all students who frequent it into mindless, soulless, coffee-driven zombies... or maybe it was just the 8am.",
       "attack": "25.0",
       "defense": "25.0",
       "health": "20.0"
     },
     {
-      "name": "CS125-Student-Swarm",
+      "name": "Ron",
       "description": "As the word 'help' echoes in your head, these students will rip you apart, asking for 125 MP help.",
       "attack": "30.0",
       "defense": "30.0",
       "health": "30.0"
     },
     {
-      "name": "126-Students",
+      "name": "Harry",
       "description": "Angry at you for interrupting their code review, these students serve as the primary defense of the moderator.",
       "attack": "15.0",
       "defense": "15.0",
       "health": "15.0"
     },
     {
-      "name": "Code-Review-Moderator",
+      "name": "Pansy",
+      "description": "The final boss. Vanquish the moderator and your GPA is safe.",
+      "attack": "45.0",
+      "defense": "45.0",
+      "health": "45.0"
+    },
+    {
+      "name": "Blaise",
       "description": "The final boss. Vanquish the moderator and your GPA is safe.",
       "attack": "45.0",
       "defense": "45.0",
       "health": "45.0"
     }
   ]
-
-
-
 }
