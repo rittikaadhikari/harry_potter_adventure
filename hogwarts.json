@@ -10,12 +10,7 @@
           "damage": "15.0"
         }
       ],
-      "directions": [
-        {
-          "directionName": "Hogwarts",
-          "room": "Great_Hall"
-        }
-      ]
+      "directions": ["Great Hall"]
     },
     {
       "name": "Great_Hall",
@@ -31,34 +26,13 @@
         }
       ],
       "directions": [
-        {
-          "directionName": "Forbidden_Forest",
-          "room": "Forbidden_Forest"
-        },
-        {
-          "directionName": "Classroom",
-          "room": "Classroom"
-        },
-        {
-          "directionName": "Astronomy_Tower",
-          "room": "Astronomy_Tower"
-        },
-        {
-          "directionName": "Library",
-          "room": "Library"
-        },
-        {
-          "directionName": "Kitchen",
-          "room": "Kitchen"
-        },
-        {
-          "directionName": "Headmaster's_Office",
-          "room": "Headmaster's_Office"
-        },
-        {
-          "directionName": "Hospital_Wing",
-          "room": "Hospital_Wing"
-        }
+        "Forbidden Forest",
+        "Classroom",
+        "Astronomy Tower",
+        "Library",
+        "Kitchen",
+        "Headmasters Office",
+        "Hospital Wing"
       ]
     },
     {
@@ -78,34 +52,13 @@
         "Troll"
       ],
       "directions": [
-        {
-          "directionName": "Great_Hall",
-          "room": "Great_Hall"
-        },
-        {
-          "directionName": "Classroom",
-          "room": "Classroom"
-        },
-        {
-          "directionName": "Astronomy_Tower",
-          "room": "Astronomy_Tower"
-        },
-        {
-          "directionName": "Library",
-          "room": "Library"
-        },
-        {
-          "directionName": "Kitchen",
-          "room": "Kitchen"
-        },
-        {
-          "directionName": "Headmaster's_Office",
-          "room": "Headmaster's_Office"
-        },
-        {
-          "directionName": "Hospital_Wing",
-          "room": "Hospital_Wing"
-        }
+        "Great Hall",
+        "Classroom",
+        "Astronomy Tower",
+        "Library",
+        "Kitchen",
+        "Headmasters Office",
+        "Hospital Wing"
       ]
     },
     {
@@ -122,34 +75,13 @@
         "Blaise"
       ],
       "directions": [
-        {
-          "directionName": "Forbidden_Forest",
-          "room": "Forbidden_Forest"
-        },
-        {
-          "directionName": "Great_Hall",
-          "room": "Great_Hall"
-        },
-        {
-          "directionName": "Astronomy_Tower",
-          "room": "Astronomy_Tower"
-        },
-        {
-          "directionName": "Library",
-          "room": "Library"
-        },
-        {
-          "directionName": "Kitchen",
-          "room": "Kitchen"
-        },
-        {
-          "directionName": "Headmaster's_Office",
-          "room": "Headmaster's_Office"
-        },
-        {
-          "directionName": "Hospital_Wing",
-          "room": "Hospital_Wing"
-        }
+        "Forbidden Forest",
+        "Great Hall",
+        "Astronomy Tower",
+        "Library",
+        "Kitchen",
+        "Headmasters Office",
+        "Hospital Wing"
       ]
     },
     {
@@ -162,34 +94,13 @@
         }
       ],
       "directions": [
-        {
-          "directionName": "Forbidden_Forest",
-          "room": "Forbidden_Forest"
-        },
-        {
-          "directionName": "Classroom",
-          "room": "Classroom"
-        },
-        {
-          "directionName": "Great_Hall",
-          "room": "Great_Hall"
-        },
-        {
-          "directionName": "Library",
-          "room": "Library"
-        },
-        {
-          "directionName": "Kitchen",
-          "room": "Kitchen"
-        },
-        {
-          "directionName": "Headmaster's_Office",
-          "room": "Headmaster's_Office"
-        },
-        {
-          "directionName": "Hospital_Wing",
-          "room": "Hospital_Wing"
-        }
+        "Forbidden Forest",
+        "Classroom",
+        "Astronomy Tower",
+        "Library",
+        "Kitchen",
+        "Headmasters Office",
+        "Hospital Wing"
       ]
     },
     {
@@ -326,34 +237,13 @@
         }
       ],
       "directions": [
-        {
-          "directionName": "Forbidden_Forest",
-          "room": "Forbidden_Forest"
-        },
-        {
-          "directionName": "Classroom",
-          "room": "Classroom"
-        },
-        {
-          "directionName": "Astronomy_Tower",
-          "room": "Astronomy_Tower"
-        },
-        {
-          "directionName": "Great_Hall",
-          "room": "Great_Hall"
-        },
-        {
-          "directionName": "Kitchen",
-          "room": "Kitchen"
-        },
-        {
-          "directionName": "Headmaster's_Office",
-          "room": "Headmaster's_Office"
-        },
-        {
-          "directionName": "Hospital_Wing",
-          "room": "Hospital_Wing"
-        }
+        "Forbidden Forest",
+        "Classroom",
+        "Astronomy Tower",
+        "Great Hall",
+        "Kitchen",
+        "Headmaster's Office",
+        "Hospital Wing"
       ]
     },
     {
@@ -382,73 +272,31 @@
         },
       ],
       "directions": [
-        {
-          "directionName": "Forbidden_Forest",
-          "room": "Forbidden_Forest"
-        },
-        {
-          "directionName": "Classroom",
-          "room": "Classroom"
-        },
-        {
-          "directionName": "Astronomy_Tower",
-          "room": "Astronomy_Tower"
-        },
-        {
-          "directionName": "Library",
-          "room": "Library"
-        },
-        {
-          "directionName": "Great_Hall",
-          "room": "Great_Hall"
-        },
-        {
-          "directionName": "Headmaster's_Office",
-          "room": "Headmaster's_Office"
-        },
-        {
-          "directionName": "Hospital_Wing",
-          "room": "Hospital_Wing"
-        }
+        "Forbidden Forest",
+        "Great Hall",
+        "Astronomy Tower",
+        "Library",
+        "Great Hall",
+        "Headmasters Office",
+        "Hospital Wing"
       ]
     },
     {
       "name": "Headmaster's_Office",
-      "description": "You are in the basement of Siebel.  You see tables with students working and door to computer labs.",
+      "description": "The Headmaster's office is the office in Hogwarts Castle in which the current headmasters or headmistresses of Hogwarts School of Witchcraft and Wizardry work during the school year.",
       "directions": [
-        {
-          "directionName": "Forbidden_Forest",
-          "room": "Forbidden_Forest"
-        },
-        {
-          "directionName": "Classroom",
-          "room": "Classroom"
-        },
-        {
-          "directionName": "Astronomy_Tower",
-          "room": "Astronomy_Tower"
-        },
-        {
-          "directionName": "Library",
-          "room": "Library"
-        },
-        {
-          "directionName": "Kitchen",
-          "room": "Kitchen"
-        },
-        {
-          "directionName": "Great_Hall",
-          "room": "Great_Hall"
-        },
-        {
-          "directionName": "Hospital_Wing",
-          "room": "Hospital_Wing"
-        }
+        "Forbidden Forest",
+        "Great Hall",
+        "Astronomy Tower",
+        "Library",
+        "Kitchen",
+        "Great Hall",
+        "Hospital Wing"
       ]
     },
     {
       "name": "Hospital_Wing",
-      "description": "You are in the basement of Siebel.  You see tables with students working and door to computer labs.",
+      "description": "The students and staff who suffer mishaps and injuries during the school year, are sent or brought to the hospital wing for treatment. \n The hospital wing is well equipped to deal with all kinds of magical and mundane injuries, from broken limbs to regrowing lost bones.",
       "food": [
         {
           "name": "Regeneration_Potion",
@@ -464,34 +312,13 @@
         }
       ],
       "directions": [
-        {
-          "directionName": "Forbidden_Forest",
-          "room": "Forbidden_Forest"
-        },
-        {
-          "directionName": "Classroom",
-          "room": "Classroom"
-        },
-        {
-          "directionName": "Astronomy_Tower",
-          "room": "Astronomy_Tower"
-        },
-        {
-          "directionName": "Library",
-          "room": "Library"
-        },
-        {
-          "directionName": "Kitchen",
-          "room": "Kitchen"
-        },
-        {
-          "directionName": "Great_Hall",
-          "room": "Great_Hall"
-        },
-        {
-          "directionName": "Great_Hall",
-          "room": "Great_Hall"
-        }
+        "Forbidden Forest",
+        "Great Hall",
+        "Astronomy Tower",
+        "Library",
+        "Kitchen",
+        "Headmasters Office",
+        "Great Hall"
       ]
     }
   ],
