@@ -28,4 +28,16 @@ public abstract class Person {
         return health;
     }
 
+    /**
+     *
+     * @return
+     */
+    @Override
+    public String toString() {
+       String output = "";
+       output += "Name: " + name + "\nDescription: " + description + "\nAttack: " + attack + "\nDefense: " +
+               defense + "\nHealth: " + health;
+       return output;
+    }
+
 }

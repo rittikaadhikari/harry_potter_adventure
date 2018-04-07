@@ -7,4 +7,15 @@ public class Player extends Person {
         return level;
     }
 
+    /**
+     *
+     * @return
+     */
+    @Override
+    public String toString() {
+       String output = super.toString();
+       output += "\nLevel: " + level;
+       return output;
+    }
+
 }

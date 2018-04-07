@@ -1,5 +1,7 @@
 package src.com.example.layout;
 
+import com.google.gson.Gson;
+import src.com.example.Data;
 import src.com.example.things.*;
 import java.util.ArrayList;
 
@@ -38,6 +40,16 @@ public class Layout {
 
     public ArrayList<Spell> getSpells() {
         return spells;
+    }
+
+    /**
+     * Loads the layout from a given filename.
+     * @param filename given filename
+     * @return a Layout object from JSON
+     */
+    public static Layout loadLayoutFromFile(String filename) {
+        Gson gson = new Gson();
+        return gson.fromJson(Data.getFileContentsAsString(filename), Layout.class);
     }
 
 }
